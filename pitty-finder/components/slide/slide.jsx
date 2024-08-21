@@ -18,23 +18,25 @@ export default function Slide() {
   ];
 
   return (
-    <Swiper
-      modules={[Navigation, Pagination, Autoplay]}
-      slidesPerView={1}
-      autoplay={{
-        delay: 7000,
-        disableOnInteraction: false,
-      }}
-      navigation={true}
-      pagination={{ clickable: true }}
-      loop={true}
-      className="slide"
-    >
-      {lista.map((lista) => (
-        <SwiperSlide className="slides" key={lista.id}>
-          <img src={lista.test}/>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div className="slide-wrapper">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        slidesPerView={1}
+        autoplay={{
+          delay: 7000,
+          disableOnInteraction: false,
+        }}
+        navigation={true}
+        pagination={{ clickable: true }}
+        loop={true}
+        className="slide"
+      >
+        {lista.map((lista) => (
+          <SwiperSlide className="slides" key={lista.id}>
+            <img src={lista.test}/>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   );
 }
