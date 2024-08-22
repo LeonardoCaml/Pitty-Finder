@@ -1,21 +1,111 @@
-.page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .header-current {
-    width: 1250px;
-    height: 140px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+.page-current {
+  margin: 0px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .logo-current {
-    width: 200px;
-  }
+.header-current {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  .title-current {
-    font-size: 26pt;
-  }
+.logo-current {
+  width: 300px;
+}
+
+.title-current {
+  font-size: 26pt;
+}
+
+.filter-current {
+  width: 80%;
+}
+
+.filter-title {
+  width: 80%;
+  font-size: 20pt;
+  margin: 20px 0px;
+}
+
+.filter-search-inputs {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.filter-search-inputs .CustomInput {
+  width: 250px;
+  height: 25px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.filter-search-inputs Button {
+  width: 200px;
+  height: 50px;
+}
+
+.result-current {
+  width: 80%;
+}
+
+.result-title {
+  font-size: 20pt;
+  margin: 20px 0px;
+  position: relative;
+}
+
+.result-title::after {
+  content: "";
+  height: 4px;
+  position: absolute;
+  width: calc(100%);
+  display: flex;
+  justify-content: end;
+  background-color: black;
+}
+
+.result-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.card {
+  border: 3px solid black;
+  border-radius: 10px;
+  width: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-image {
+  border: 3px solid black;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.card-name {
+  margin: 10px 0px;
+  width: 200px;
+  height: auto;
+}
+
+.card-description {
+  margin: 10px 0px;
+  height: 30px;
+}

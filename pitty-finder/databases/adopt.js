@@ -1,0 +1,86 @@
+import foto from "../constants/photos.js";
+
+const animals = [
+  {
+    id: 1,
+    foto: foto.cachorro,
+    nome: "Rex",
+    estado: "SP",
+    cidade: "São Paulo",
+    especie: "cachorro",
+  },
+  {
+    id: 2,
+    foto: foto.gato,
+    nome: "Mia",
+    estado: "RJ",
+    cidade: "Rio de Janeiro",
+    especie: "gato",
+  },
+  {
+    id: 3,
+    foto: foto.cachorro,
+    nome: "Buddy",
+    estado: "MG",
+    cidade: "Belo Horizonte",
+    especie: "cachorro",
+  },
+  {
+    id: 4,
+    foto: foto.gato,
+    nome: "Luna",
+    estado: "BA",
+    cidade: "Salvador",
+    especie: "gato",
+  },
+  {
+    id: 5,
+    foto: foto.cachorro,
+    nome: "Thor",
+    estado: "PR",
+    cidade: "Curitiba",
+    especie: "cachorro",
+  },
+  {
+    id: 6,
+    foto: foto.gato,
+    nome: "Felix",
+    estado: "RS",
+    cidade: "Porto Alegre",
+    especie: "gato",
+  },
+  {
+    id: 7,
+    foto: foto.cachorro,
+    nome: "Max",
+    estado: "PE",
+    cidade: "Recife",
+    especie: "cachorro",
+  },
+  {
+    id: 8,
+    foto: foto.gato,
+    nome: "Simba",
+    estado: "CE",
+    cidade: "Fortaleza",
+    especie: "gato",
+  },
+  {
+    id: 9,
+    foto: foto.cachorro,
+    nome: "Bob",
+    estado: "GO",
+    cidade: "Goiânia",
+    especie: "cachorro",
+  },
+  {
+    id: 10,
+    foto: foto.gato,
+    nome: "Nina",
+    estado: "DF",
+    cidade: "Brasília",
+    especie: "gato",
+  },
+];
+
+export default animals

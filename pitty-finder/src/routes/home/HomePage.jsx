@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Slide from "../../../components/slide/slide.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 import Card from "../../../components/card/Card.jsx";
-import Button from "../../../components/button/Button.jsx";
+import CustomButton from "../../../components/button/CustomButton.jsx";
 
 import foto from "../../../constants/photos.js";
 
@@ -65,7 +65,9 @@ export default function HomePage() {
         <Slide className="slide" />
       </div>
       <div className="addict">
-        <h1 className="addict-tittle title">Adote</h1>
+        <div className=" title">
+          <h1 className="addict-tittle">Adote</h1>
+        </div>
         <div className="addict-card">
           {adote.map((item) => (
             <Card
@@ -78,12 +80,14 @@ export default function HomePage() {
         </div>
         <div className="see-more">
           <Link to='/adote'>
-            <Button tittle="Ver mais" />
+            <CustomButton tittle="Ver mais" />
           </Link>
         </div>
       </div>
       <div className="house">
-        <h1 className="house-tittle title">Abrigos</h1>
+        <div className="title">
+          <h1 className="house-tittle">Abrigos</h1>
+        </div>
         <div className="house-card">
           {abrigo.map((item) => (
             <Card
@@ -95,7 +99,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="see-more">
-          <Button tittle="Ver mais" />
+          <CustomButton tittle="Ver mais" />
         </div>
       </div>
       <div className="footer">

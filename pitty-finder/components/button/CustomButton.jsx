@@ -1,6 +1,6 @@
-import './button.css'
+import './custombutton.css'
 
-export default function Button({ tittle, onClick }) {
+export default function CustomButton({ tittle, onClick }) {
     return(
         <div className='button-wrapper'>
             <button
