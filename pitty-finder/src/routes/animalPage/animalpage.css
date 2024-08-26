@@ -1,0 +1,61 @@
+.page-current {
+  margin: 0px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-current {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-current {
+  width: 200px;
+}
+
+.content {
+  display: flex;
+  gap: 100px;
+}
+
+.animal-information {
+  width: auto;
+}
+
+.animal-datas h1 {
+  font-size: 20pt;
+  margin-top: 10px;
+}
+
+.animal-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.animal-description h1 {
+    font-size: 86pt;
+    line-height: 60px;
+}
+
+.animal-description h2 {
+    font-size: 26pt;
+    line-height: 40px;
+}
+
+.animal-description p {
+    font-size: 16pt;
+    line-height: 30px;
+}
+
+.animal-description > CustomButton {
+ width: 200px;
+}
+
+.foto {
+  width: 300px;
+  border: 1px solid black;
+}

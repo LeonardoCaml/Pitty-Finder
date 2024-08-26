@@ -86,11 +86,11 @@
 }
 
 .addict {
-  width: 100%;
+  width: 90%;
 }
 
 .house {
-  width: 100%;
+  width: 90%;
 }
 
 .addict-card {
@@ -140,11 +140,6 @@
 .functions {
   margin: 10px 0;
   gap: 3;
-}
-
-.footer-bottom {
-  display: flex;
-  align-items: center;
 }
 
 .footer-down {
