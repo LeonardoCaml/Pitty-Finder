@@ -1,53 +1,32 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
+// components
 import Slide from "../../../components/slide/slide.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 import Card from "../../../components/card/Card.jsx";
 import CustomButton from "../../../components/button/CustomButton.jsx";
 
+// constants
 import foto from "../../../constants/photos.js";
 
+// css
 import "./homepage.css";
 
-export default function HomePage() {
-  const adote = [
-    {
-      id: 1,
-      image: foto.cachorro,
-      tittle: "Caroncho",
-      description: "Belém/PA",
-    },
-    {
-      id: 2,
-      image: foto.cachorro,
-      tittle: "Guerreiro",
-      description: "Belém/PA",
-    },
-    { id: 3, image: foto.cachorro, tittle: "Marcus", description: "Belém/PA" },
-    { id: 4, image: foto.cachorro, tittle: "Beto", description: "Belém/PA" },
-  ];
+// databases
+import animals from "../../../databases/adopt.js";
+import abrigos from "../../../databases/abrigos.js";
 
-  const abrigo = [
-    {
-      id: 1,
-      image: foto.abrigo,
-      tittle: "Casa dos animais",
-      description: "Belém/PA",
-    },
-    {
-      id: 2,
-      image: foto.abrigo,
-      tittle: "Anjos da guarda",
-      description: "Belém/PA",
-    },
-    { id: 3, image: foto.abrigo, tittle: "Simpla", description: "Belém/PA" },
-    {
-      id: 4,
-      image: foto.abrigo,
-      tittle: "HouseOfDogs",
-      description: "Belém/PA",
-    },
-  ];
+export default function HomePage() {
+  const navigate = useNavigate();
+
+  const handleCardClick = (id) => {
+    navigate(`/adote/${id}`);
+  };
+
+  const adote = animals.slice(0, 4);
+
+  const abrigo = abrigos.slice(0,4)
 
   return (
     <div className="page">
@@ -72,14 +51,15 @@ export default function HomePage() {
           {adote.map((item) => (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.tittle}
-              description={item.description}
+              onClick={() => handleCardClick(item.id)}
+              image={item.foto}
+              title={item.nome}
+              description={item.cidade + " / " + item.estado}
             />
           ))}
         </div>
         <div className="see-more">
-          <Link to='/adote'>
+          <Link to="/adote">
             <CustomButton tittle="Ver mais" />
           </Link>
         </div>
@@ -92,14 +72,16 @@ export default function HomePage() {
           {abrigo.map((item) => (
             <Card
               key={item.id}
-              image={item.image}
-              title={item.tittle}
-              description={item.description}
+              image={item.foto}
+              title={item.nome}
+              description={item.ficha.local.rua}
             />
           ))}
         </div>
         <div className="see-more">
-          <CustomButton tittle="Ver mais" />
+        <Link to="/abrigo">
+            <CustomButton tittle="Ver mais" />
+          </Link>
         </div>
       </div>
       <div className="footer">
