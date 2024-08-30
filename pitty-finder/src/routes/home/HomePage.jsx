@@ -20,8 +20,11 @@ import abrigos from "../../../databases/abrigos.js";
 export default function HomePage() {
   const navigate = useNavigate();
 
-  const handleCardClick = (id) => {
+  const handleCardClickAnimal = (id) => {
     navigate(`/adote/${id}`);
+  };
+  const handleCardClickAbrigo = (id) => {
+    navigate(`/abrigo/${id}`);
   };
 
   const adote = animals.slice(0, 4);
@@ -51,7 +54,7 @@ export default function HomePage() {
           {adote.map((item) => (
             <Card
               key={item.id}
-              onClick={() => handleCardClick(item.id)}
+              onClick={() => handleCardClickAnimal(item.id)}
               image={item.foto}
               title={item.nome}
               description={item.cidade + " / " + item.estado}
@@ -72,6 +75,7 @@ export default function HomePage() {
           {abrigo.map((item) => (
             <Card
               key={item.id}
+              onClick={() => handleCardClickAbrigo(item.id)}
               image={item.foto}
               title={item.nome}
               description={item.ficha.local.rua}

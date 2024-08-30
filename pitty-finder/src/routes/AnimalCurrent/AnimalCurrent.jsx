@@ -1,8 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 // css
-import "./animalpage.css";
+import "./animalcurrent.css";
 
 // databases
 import animals from "../../../databases/adopt";
@@ -11,7 +12,9 @@ import animals from "../../../databases/adopt";
 import foto from "../../../constants/photos";
 import CustomButton from "../../../components/button/CustomButton";
 
-export default function AnimalPage() {
+export default function AnimalCurrent() {
+  const navigate = useNavigate();
+
   const { id } = useParams();
   const card = animals.find((item) => item.id === parseInt(id, 10));
 
@@ -23,6 +26,9 @@ export default function AnimalPage() {
     <div className="page-current">
       <header className="header-current">
         <img className="logo-current" src={foto.logo} alt="" />
+        <button onClick={() => navigate(-1)} className="voltar">
+          ← Voltar
+        </button>
       </header>
       <div className="content">
         <div className="animal-information">

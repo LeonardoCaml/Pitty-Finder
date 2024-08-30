@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useNavigate } from "react-router-dom";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -7,15 +8,15 @@ import "swiper/css/autoplay";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import foto from '../../constants/photos.js'
+// database
+import artigo from "../../databases/artigo.js";
 
 export default function Slide() {
-  const lista = [
-    { id: "1", test: foto.slide1 },
-    { id: "2", test: foto.slide2 },
-    { id: "3", test: foto.slide3 },
-    { id: "4", test: foto.slide4 },
-  ];
+  const navigate = useNavigate();
+  const handleClickArtigo = (id) => {
+    navigate(`/artigo/${id}`);
+  };
+  const lista = artigo.slice(0,5);
 
   return (
     <div className="slide-wrapper">
@@ -32,8 +33,12 @@ export default function Slide() {
         className="slide"
       >
         {lista.map((lista) => (
-          <SwiperSlide className="slides" key={lista.id}>
-            <img src={lista.test}/>
+          <SwiperSlide
+            className="slides"
+            key={lista.id}
+            onClick={() => handleClickArtigo(lista.id)}
+          >
+            <img src={lista.slide} />
           </SwiperSlide>
         ))}
       </Swiper>

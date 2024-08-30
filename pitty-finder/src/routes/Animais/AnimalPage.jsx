@@ -13,9 +13,9 @@ import Footer from "../../../components/footer/Footer.jsx";
 import animals from "../../../databases/adopt.js";
 
 //css
-import "./adoptpage.css";
+import "./animalpage.css";
 
-export default function AdoptPage() {
+export default function AnimalPage() {
   const navigate = useNavigate();
 
   const handleCardClick = (id) => {

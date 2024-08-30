@@ -16,6 +16,17 @@
   width: 200px;
 }
 
+.voltar {
+  border: none;
+  background-color: transparent;
+  font-size: 18pt;
+  transition: .2s;
+}
+
+.voltar:hover {
+  scale: 1.1;
+}
+
 .content {
   display: flex;
   gap: 100px;
@@ -57,6 +68,4 @@
 
 .foto {
   width: 300px;
-  border: 1px solid black;
-  border-radius: 15px;
 }
