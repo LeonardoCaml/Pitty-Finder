@@ -60,7 +60,7 @@ export default function Abrigo() {
           </h2>
           <p className="description-insert-abrigo">{card.descricao}</p>
           <div className="button">
-            <CustomButton tittle="adotar" className="button-adopt" />
+            <CustomButton tittle="ajudar" className="button-adopt" />
             <CustomButton tittle="salvar" className="button-save" />
           </div>
         </div>

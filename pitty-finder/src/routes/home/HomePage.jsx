@@ -1,18 +1,14 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
 // components
 import Slide from "../../../components/slide/slide.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 import Card from "../../../components/card/Card.jsx";
 import CustomButton from "../../../components/button/CustomButton.jsx";
-
 // constants
 import foto from "../../../constants/photos.js";
-
 // css
 import "./homepage.css";
-
 // databases
 import animals from "../../../databases/adopt.js";
 import abrigos from "../../../databases/abrigos.js";
@@ -29,7 +25,7 @@ export default function HomePage() {
 
   const adote = animals.slice(0, 4);
 
-  const abrigo = abrigos.slice(0,4)
+  const abrigo = abrigos.slice(0, 4);
 
   return (
     <div className="page">
@@ -83,38 +79,12 @@ export default function HomePage() {
           ))}
         </div>
         <div className="see-more">
-        <Link to="/abrigo">
+          <Link to="/abrigo">
             <CustomButton tittle="Ver mais" />
           </Link>
         </div>
       </div>
-      <div className="footer">
-        <div className="more">
-          <div className="functions">
-            <h4>recursos</h4>
-            <p>logar</p>
-            <p>adotar</p>
-            <p>abrigos</p>
-            <p>doar</p>
-          </div>
-          <div className="questions">
-            <h4>perguntas</h4>
-            <p>como posso adotar?</p>
-            <p>como faço para encontrar os abrigos mais próximos?</p>
-            <p>como posso ajudar?</p>
-            <p>como posso entrar em contato?</p>
-            <p>perguntar</p>
-          </div>
-        </div>
-        <div className="footer-down">
-          <Footer />
-          <div className="footer-icon">
-            <img src={foto.facebook} />
-            <img src={foto.instagram} />
-            <img src={foto.email} />
-          </div>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 }
