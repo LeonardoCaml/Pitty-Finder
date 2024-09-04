@@ -6,7 +6,7 @@
 }
 
 .header {
-  width: 100%;
+  width: 90%;
   height: 140px;
   display: flex;
   align-items: center;
@@ -21,6 +21,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  color: black;
 }
 
 .account-name {

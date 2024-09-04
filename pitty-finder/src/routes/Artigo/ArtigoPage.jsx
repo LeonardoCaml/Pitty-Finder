@@ -13,7 +13,9 @@ import artigo from "../../../databases/artigo";
 import "./artigopage.css";
 
 export default function ArtigoPage() {
+
   const navigate = useNavigate();
+
   const handleClickArtigo = (id) => {
     navigate(`/artigo/${id}`);
   };
@@ -21,6 +23,7 @@ export default function ArtigoPage() {
   const { id } = useParams();
 
   const currentArticle = artigo.find((item) => item.id === parseInt(id, 10));
+
   const recommendedArticle = artigo
     .filter((item) => item.id !== parseInt(id, 10))
     .slice(0, 5);
@@ -45,7 +48,7 @@ export default function ArtigoPage() {
           <ul className="other-information-list">
             {recommendedArticle.map((item) => (
               <li className="artigo" key={item.id}>
-                <img src="" alt="" className="artigo-img" />
+                <img src={item.icon} alt="" className="artigo-img" />
                 <h3 className="artigo-title">{item.titulo}</h3>
                 <button
                   className="artigo-see-more"

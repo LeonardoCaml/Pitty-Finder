@@ -1,27 +1,27 @@
-.page-current-adopt {
-  margin: 0px 50px;
+.page-detail {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.header-current-adopt {
-  width: 100%;
-  height: 140px;
+.header-detail {
+  width: 80%;
+  height: fit-content;
+  margin-top: 30px;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
 }
 
-.logo-current-adopt {
-  width: 300px;
+.logo-detail {
+  width: 250px;
 }
 
-.title-current-adopt {
-  font-size: 26pt;
+.title-detail {
+  font-size: 60pt;
 }
 
-.filter-current-adopt {
+.filter-detail {
   width: 80%;
 }
 
@@ -44,6 +44,7 @@
   padding: 10px;
   border: 2px solid black;
   border-radius: 10px;
+  font-size: 12pt;
 }
 
 .filter-search-inputs Button {
@@ -51,7 +52,7 @@
   height: 50px;
 }
 
-.result-current-adopt {
+.result-detail {
   width: 80%;
 }
 
@@ -65,23 +66,17 @@
   content: "";
   height: 4px;
   position: absolute;
-  width: calc(100%);
+  width: 100%;
   display: flex;
   justify-content: end;
   background-color: black;
 }
 
-.result-cards {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .cards {
-  margin: 20px 0;
+  width: 80%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px 80px;
+  grid: auto-flow/repeat(5, 1fr);
+  gap: 15px;
 }
 
 .card {

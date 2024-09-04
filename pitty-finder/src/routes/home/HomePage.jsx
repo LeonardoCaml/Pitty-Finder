@@ -8,7 +8,7 @@ import CustomButton from "../../../components/button/CustomButton.jsx";
 // constants
 import foto from "../../../constants/photos.js";
 // css
-import "./homepage.css";
+import "../CSS/homepage.css";
 // databases
 import animals from "../../../databases/adopt.js";
 import abrigos from "../../../databases/abrigos.js";
@@ -23,9 +23,9 @@ export default function HomePage() {
     navigate(`/abrigo/${id}`);
   };
 
-  const adote = animals.slice(0, 4);
+  const adote = animals.slice(0, 5);
 
-  const abrigo = abrigos.slice(0, 4);
+  const abrigo = abrigos.slice(0, 5);
 
   return (
     <div className="page">
@@ -33,10 +33,12 @@ export default function HomePage() {
         <div>
           <img className="logo" src={foto.logo} />
         </div>
-        <div className="account">
-          <p className="account-name">faça login</p>
-          <img className="account-circle" src={foto.account} />
-        </div>
+        <Link to='/perfil'>
+          <div className="account">
+            <p className="account-name">faça login</p>
+            <img className="account-circle" src={foto.account} />
+          </div>
+        </Link>
       </header>
       <div>
         <h1 className="title">Novidades</h1>
