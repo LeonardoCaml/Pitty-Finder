@@ -35,7 +35,7 @@ export default function HomePage() {
         </div>
         <Link to='/perfil'>
           <div className="account">
-            <p className="account-name">faça login</p>
+            <p className="account-name">olá, leonardo</p>
             <img className="account-circle" src={foto.account} />
           </div>
         </Link>

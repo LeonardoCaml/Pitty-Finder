@@ -9,7 +9,7 @@ import animais from "../../../databases/adopt";
 import "./perfilpage.css";
 
 export default function PerfilPage() {
-  const animalSave = animais.slice(0, 2);
+  const animalSave = animais.slice(0, 3);
   const abrigoSave = abrigo.slice(0, 2);
 
   return (
@@ -22,52 +22,42 @@ export default function PerfilPage() {
               account_circle
             </span>
           </div>
-          <p>21 anos - Dog lovers</p>
-          <p>Belém/PA</p>
+          <p className="bio">nome completo: leonardo da silva camelo</p>
+          <p className="bio">telefone: (91) 98188-8897</p>
+          <p className="bio">local: belém/pa</p>
+          <p className="bio">prefêrencias: cachorro</p>
         </div>
         <div>
-          <span class="material-symbols-outlined">menu</span>
+          <span class="material-symbols-outlined menu">menu</span>
         </div>
       </div>
       <div className="list">
-        <div className="personal-list">
-          <h1 className="title-list">salvos</h1>
-          <div className="card-locale">
-            {animalSave.map((item) => (
-              <Card
-                key={item.id}
-                image={item.foto}
-                title={item.nome}
-                description={item.cidade + " / " + item.estado}
-              />
-            ))}
-            {abrigoSave.map((item) => (
-              <Card
-                key={item.id}
-                image={item.foto}
-                title={item.nome}
-                description={item.cidade + " / " + item.estado}
-              />
-            ))}
+        <div className="favourite-item">
+          <div className="personal-list">
+            <h1 className="title-list">animais favoritados</h1>
+            <div className="card-locale">
+              {animalSave.map((item) => (
+                <Card
+                  key={item.id}
+                  image={item.foto}
+                  title={item.nome}
+                  description={item.cidade + " / " + item.estado}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-        <div className="personal-list">
-          <h1 className="title-list">em processo</h1>
-          <div className="card-locale">
-            {animalSave.map((item) => (
-              <Card
-                key={item.id}
-                image={item.foto}
-                title={item.nome}
-                description={item.cidade + " / " + item.estado}
-              />
-            ))}
-          </div>
-        </div>
-        <div className="personal-list">
-          <h1 className="title-list">em processo</h1>
-          <div className="card-unlocale">
-            <img src={foto.empty} alt="empty card" />
+          <div className="personal-list">
+            <h1 className="title-list">abrigos favoritados</h1>
+            <div className="card-locale">
+              {abrigoSave.map((item) => (
+                <Card
+                  key={item.id}
+                  image={item.foto}
+                  title={item.nome}
+                  description={item.cidade + " / " + item.estado}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

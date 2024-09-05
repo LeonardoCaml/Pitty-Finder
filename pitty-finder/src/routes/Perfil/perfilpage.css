@@ -1,6 +1,6 @@
 .header-perfil {
   width: 90%;
-  height: 100px;
+  height: auto;
   margin: 40px 0 20px 0;
   display: flex;
   align-items: start;
@@ -19,6 +19,10 @@
   line-height: 14px;
 }
 
+.menu {
+  font-size: 25pt;
+}
+
 .user {
   display: flex;
   align-items: flex-end;
@@ -32,6 +36,14 @@
 .user h1 {
   font-size: 50pt;
   line-height: 50px;
+}
+
+.description-bio {
+  padding: 5px;
+}
+
+.bio {
+  font-size: 12pt;
 }
 
 .header {
