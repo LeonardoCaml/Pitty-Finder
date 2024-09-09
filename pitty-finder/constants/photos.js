@@ -3,11 +3,23 @@ import slide1 from '../src/assets/photos/1.jpg'
 import slide2 from '../src/assets/photos/2.jpg'
 import slide3 from '../src/assets/photos/3.jpg'
 import slide4 from '../src/assets/photos/4.jpg'
+import slide5 from '../src/assets/photos/5.png'
 
 // card
 import abrigo from '../src/assets/photos/Abrigos.png'
 import cachorro from '../src/assets/photos/cachorro.png'
 import gato from '../src/assets/photos/gato.png'
+
+//animais
+import mia from '../src/assets/photos/animais/pexels-cat-1.jpg'
+import luna from '../src/assets/photos/animais/pexels-cat-2.jpg'
+import felix from '../src/assets/photos/animais/pexels-cat-3.jpg'
+import simba from '../src/assets/photos/animais/pexels-cat-4.jpg'
+import nina from '../src/assets/photos/animais/pexels-cat-5.jpg'
+import buddy from '../src/assets/photos/animais/pexels-dog-1.jpg'
+import rex from '../src/assets/photos/animais/pexels-dog-2.jpg'
+import thor from '../src/assets/photos/animais/pexels-dog-3.jpg'
+import max from '../src/assets/photos/animais/pexels-dog-4.jpg'
 
 // header and perfil 
 import logo from '../src/assets/photos/logo.png'
@@ -25,12 +37,12 @@ import data from '../src/assets/photos/data.png'
 import pet from '../src/assets/photos/pet.png'
 import saude from '../src/assets/photos/saude.png'
 
-
 export default {
     slide1,
     slide2,
     slide3,
     slide4,
+    slide5,
     abrigo,
     logo,
     account,
@@ -43,5 +55,14 @@ export default {
     caridade, 
     data,
     pet,
-    saude
+    saude,
+    mia,
+    luna,
+    felix,
+    simba,
+    nina,
+    rex,
+    buddy,
+    thor,
+    max
 }

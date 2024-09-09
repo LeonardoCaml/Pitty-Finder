@@ -27,13 +27,6 @@
   display: flex;
   align-items: flex-end;
   gap: 10px;
-}
-
-.user .user-icon {
-  font-size: 40pt;
-}
-
-.user h1 {
   font-size: 50pt;
   line-height: 50px;
 }

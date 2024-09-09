@@ -68,4 +68,8 @@
 
 .foto {
   width: 300px;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 25px;
+  object-fit: cover;
 }

@@ -13,7 +13,7 @@ import Footer from "../../../components/footer/Footer.jsx";
 import animals from "../../../databases/adopt.js";
 
 //css
-import "../CSS/DetailsPage.css";
+import "../../CSS/DetailsPage.css";
 
 export default function AnimalPage() {
   const navigate = useNavigate();

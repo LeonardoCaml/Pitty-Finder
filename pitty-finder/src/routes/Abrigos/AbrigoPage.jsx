@@ -9,7 +9,7 @@ import Footer from "../../../components/footer/Footer.jsx";
 // databases
 import abrigo from "../../../databases/abrigos.js";
 //css
-import "../CSS/DetailsPage.css";
+import "../../CSS/DetailsPage.css";
 
 export default function AbrigoPage() {
   const navigate = useNavigate();

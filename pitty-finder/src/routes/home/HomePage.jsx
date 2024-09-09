@@ -8,7 +8,7 @@ import CustomButton from "../../../components/button/CustomButton.jsx";
 // constants
 import foto from "../../../constants/photos.js";
 // css
-import "../CSS/homepage.css";
+import "../../CSS/homepage.css";
 // databases
 import animals from "../../../databases/adopt.js";
 import abrigos from "../../../databases/abrigos.js";
@@ -40,7 +40,7 @@ export default function HomePage() {
           </div>
         </Link>
       </header>
-      <div>
+      <div className="slider-area">
         <h1 className="title">Novidades</h1>
         <Slide className="slide" />
       </div>

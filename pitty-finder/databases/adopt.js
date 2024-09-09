@@ -3,7 +3,7 @@ import foto from "../constants/photos.js";
 const animals = [
   {
     id: 1,
-    foto: foto.cachorro,
+    foto: foto.rex,
     nome: "Rex",
     estado: "SP",
     cidade: "São Paulo",
@@ -18,7 +18,7 @@ const animals = [
   },
   {
     id: 2,
-    foto: foto.gato,
+    foto: foto.mia,
     nome: "Mia",
     estado: "RJ",
     cidade: "Rio de Janeiro",
@@ -33,7 +33,7 @@ const animals = [
   },
   {
     id: 3,
-    foto: foto.cachorro,
+    foto: foto.buddy,
     nome: "Buddy",
     estado: "MG",
     cidade: "Belo Horizonte",
@@ -48,7 +48,7 @@ const animals = [
   },
   {
     id: 4,
-    foto: foto.gato,
+    foto: foto.luna,
     nome: "Luna",
     estado: "BA",
     cidade: "Salvador",
@@ -63,7 +63,7 @@ const animals = [
   },
   {
     id: 5,
-    foto: foto.cachorro,
+    foto: foto.thor,
     nome: "Thor",
     estado: "PR",
     cidade: "Curitiba",
@@ -78,7 +78,7 @@ const animals = [
   },
   {
     id: 6,
-    foto: foto.gato,
+    foto: foto.felix,
     nome: "Felix",
     estado: "RS",
     cidade: "Porto Alegre",
@@ -93,7 +93,7 @@ const animals = [
   },
   {
     id: 7,
-    foto: foto.cachorro,
+    foto: foto.max,
     nome: "Max",
     estado: "PE",
     cidade: "Recife",
@@ -108,7 +108,7 @@ const animals = [
   },
   {
     id: 8,
-    foto: foto.gato,
+    foto: foto.simba,
     nome: "Simba",
     estado: "CE",
     cidade: "Fortaleza",
@@ -138,7 +138,7 @@ const animals = [
   },
   {
     id: 10,
-    foto: foto.gato,
+    foto: foto.nina,
     nome: "Nina",
     estado: "DF",
     cidade: "Brasília",

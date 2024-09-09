@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 // css
-import "./animalcurrent.css";
+import "../../CSS/CurrentPage.css";
 
 // databases
 import animals from "../../../databases/adopt";
@@ -11,6 +11,7 @@ import animals from "../../../databases/adopt";
 //components
 import foto from "../../../constants/photos";
 import CustomButton from "../../../components/button/CustomButton";
+import Footer from "../../../components/footer/Footer";
 
 export default function AnimalCurrent() {
   const navigate = useNavigate();
@@ -50,6 +51,7 @@ export default function AnimalCurrent() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
