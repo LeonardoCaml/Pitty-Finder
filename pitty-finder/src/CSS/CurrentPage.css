@@ -16,28 +16,25 @@
   width: 200px;
 }
 
-.voltar {
-  border: none;
-  background-color: transparent;
-  font-size: 18pt;
-  transition: .2s;
-}
-
-.voltar:hover {
-  scale: 1.1;
-}
-
 .content {
   display: flex;
   gap: 100px;
 }
 
-.animal-datas h1 {
+.foto {
+  width: 350px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.current-datas h1 {
   font-size: 20pt;
   margin-top: 10px;
 }
 
-.animal-description {
+.current-description {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -45,12 +42,12 @@
 
 .description-name {
   font-size: 86pt;
-  line-height: 60px;
+  line-height: 100px;
 }
 
 .description-local {
-  font-size: 26pt;
-  line-height: 40px;
+  font-size: 16pt;
+  opacity: 0.5;
 }
 
 .description-insert {
@@ -59,17 +56,30 @@
   width: 90%;
 }
 
-.animal-description .button {
+.contact {
   display: flex;
-  flex-direction: column;
-  width: fit-content;
-  gap: 15px;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
 }
 
-.foto {
-  width: 300px;
-  height: 250px;
-  border: 2px solid black;
-  border-radius: 25px;
-  object-fit: cover;
+.contact img {
+  width: 30px;
+}
+
+.contact p {
+  font-size: 14pt;
+}
+
+.current-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
 }

@@ -3,7 +3,7 @@ import foto from "../constants/photos";
 const abrigos = [
   {
     id: 1,
-    foto: foto.abrigo,
+    foto: foto.abrigo_esperanca,
     nome: "Abrigo Esperança",
     horarioDeFuncionamento: "aberto / funcionamento: 08:00 - 18:00",
     descricao:
@@ -23,7 +23,7 @@ const abrigos = [
   },
   {
     id: 2,
-    foto: foto.abrigo,
+    foto: foto.lar_dos_peludos,
     nome: "Lar dos Peludos",
     horarioDeFuncionamento: "aberto / funcionamento: 09:00 - 17:00",
     descricao:
@@ -43,7 +43,7 @@ const abrigos = [
   },
   {
     id: 3,
-    foto: foto.abrigo,
+    foto: foto.refugio_animal,
     nome: "Refúgio Animal",
     horarioDeFuncionamento: "fechado / funcionamento: 10:00 - 16:00",
     descricao:
@@ -63,7 +63,7 @@ const abrigos = [
   },
   {
     id: 4,
-    foto: foto.abrigo,
+    foto: foto.casa_dos_bichos,
     nome: "Casa dos Bichos",
     horarioDeFuncionamento: "aberto / funcionamento: 07:00 - 19:00",
     descricao:
@@ -83,7 +83,7 @@ const abrigos = [
   },
   {
     id: 5,
-    foto: foto.abrigo,
+    foto: foto.satuario_pet,
     nome: "Santuário Pet",
     horarioDeFuncionamento: "fechado / funcionamento: 08:30 - 16:30",
     descricao:

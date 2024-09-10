@@ -33,7 +33,7 @@ export default function HomePage() {
         <div>
           <img className="logo" src={foto.logo} />
         </div>
-        <Link to='/perfil'>
+        <Link to="/perfil">
           <div className="account">
             <p className="account-name">olá, leonardo</p>
             <img className="account-circle" src={foto.account} />
