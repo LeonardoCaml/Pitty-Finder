@@ -73,7 +73,6 @@
 }
 
 .cards {
-  width: 80%;
   display: grid;
   grid: auto-flow/repeat(5, 1fr);
   gap: 15px;

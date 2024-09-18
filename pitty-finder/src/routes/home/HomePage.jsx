@@ -45,9 +45,7 @@ export default function HomePage() {
         <Slide className="slide" />
       </div>
       <div className="addict">
-        <div className=" title">
-          <h1 className="addict-tittle">Adote</h1>
-        </div>
+        <h1 className="title">Adote</h1>
         <div className="addict-card">
           {adote.map((item) => (
             <Card
@@ -66,9 +64,7 @@ export default function HomePage() {
         </div>
       </div>
       <div className="house">
-        <div className="title">
-          <h1 className="house-tittle">Abrigos</h1>
-        </div>
+        <h1 className="title">Abrigos</h1>
         <div className="house-card">
           {abrigo.map((item) => (
             <Card
