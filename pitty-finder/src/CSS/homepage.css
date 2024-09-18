@@ -6,7 +6,7 @@
 }
 
 .header {
-  width: 90%;
+  width: 80%;
   height: 120px;
   display: flex;
   align-items: center;
@@ -31,37 +31,6 @@
 .account-circle {
   width: 40px;
   height: 40px;
-}
-
-.slide-area {
-  width: 90%;
-}
-
-.slide {
-  position: relative;
-  border: 3px solid black;
-  border-radius: 15px;
-  width: 1250px;
-  height: 220px;
-  margin-bottom: 25px;
-}
-
-.slide-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.slide-wrapper::before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 100%;
-  height: 90%;
-  border: 3px solid black;
-  border-radius: 15px;
-  z-index: 1;
-  box-sizing: border-box;
 }
 
 .card {
@@ -95,11 +64,11 @@
 }
 
 .addict {
-  width: 90%;
+  width: 80%;
 }
 
 .house {
-  width: 90%;
+  width: 80%;
 }
 
 .addict-card {

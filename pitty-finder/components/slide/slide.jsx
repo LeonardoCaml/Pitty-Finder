@@ -8,6 +8,9 @@ import "swiper/css/autoplay";
 
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
+// css
+import "./slide.css";
+
 // database
 import artigo from "../../databases/artigo.js";
 
@@ -16,32 +19,30 @@ export default function Slide() {
   const handleClickArtigo = (id) => {
     navigate(`/artigo/${id}`);
   };
-  const lista = artigo.slice(0,5);
+  const lista = artigo.slice(0, 5);
 
   return (
-    <div className="slide-wrapper">
-      <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
-        slidesPerView={1}
-        autoplay={{
-          delay: 7000,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        pagination={{ clickable: true }}
-        loop={true}
-        className="slide"
-      >
-        {lista.map((lista) => (
-          <SwiperSlide
-            className="slides"
-            key={lista.id}
-            onClick={() => handleClickArtigo(lista.id)}
-          >
-            <img src={lista.slide} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <Swiper
+      modules={[Navigation, Pagination, Autoplay]}
+      slidesPerView={1}
+      autoplay={{
+        delay: 7000,
+        disableOnInteraction: false,
+      }}
+      navigation={true}
+      pagination={{ clickable: true }}
+      loop={true}
+      className="slide"
+    >
+      {lista.map((lista) => (
+        <SwiperSlide
+          className="slides"
+          key={lista.id}
+          onClick={() => handleClickArtigo(lista.id)}
+        >
+          <img src={lista.slide} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }
