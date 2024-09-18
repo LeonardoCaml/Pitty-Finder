@@ -1,0 +1,74 @@
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Escondida por padrão */
+    background-color: white;
+    color: black;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 1;
+    transition: .2s;
+  }
+  
+  .sidebar.open {
+    right: 0; /* Quando aberta */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 15px;
+  }
+  
+  .sidebar ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: .2s;
+  }
+  
+  .sidebar ul li a:hover {
+    font-size: 20px;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  .open-btn {
+    background: none;
+    margin: 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .overlay.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  

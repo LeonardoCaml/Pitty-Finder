@@ -1,0 +1,85 @@
+.page-current {
+  margin: 0px 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-current {
+  width: 100%;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-current {
+  width: 200px;
+}
+
+.content {
+  display: flex;
+  gap: 100px;
+}
+
+.foto {
+  width: 350px;
+  height: 300px;
+  border: 2px solid black;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.current-datas h1 {
+  font-size: 20pt;
+  margin-top: 10px;
+}
+
+.current-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.description-name {
+  font-size: 86pt;
+  line-height: 100px;
+}
+
+.description-local {
+  font-size: 16pt;
+  opacity: 0.5;
+}
+
+.description-insert {
+  font-size: 16pt;
+  line-height: 30px;
+  width: 90%;
+}
+
+.contact {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.contact img {
+  width: 30px;
+}
+
+.contact p {
+  font-size: 14pt;
+}
+
+.current-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: fit-content;
+}
