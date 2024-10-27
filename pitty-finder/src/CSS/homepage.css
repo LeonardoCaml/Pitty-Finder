@@ -6,7 +6,7 @@
 }
 
 .header {
-  width: 80%;
+  width: 80vw;
   height: 120px;
   display: flex;
   align-items: center;
@@ -55,12 +55,14 @@
   margin: 10px 0px;
   width: 200px;
   height: auto;
+  font-size: 1.5rem;
   line-height: 26px;
 }
 
 .card-description {
   margin: 10px 0px;
   height: 15px;
+  font-size: 1rem;
 }
 
 .addict {
