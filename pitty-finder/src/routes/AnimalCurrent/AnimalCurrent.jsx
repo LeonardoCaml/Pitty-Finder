@@ -32,8 +32,7 @@ export default function AnimalCurrent() {
         <div className="current-information">
           <img src={card.foto} alt="foto_animal" className="foto" />
           <div className="current-datas">
-            <h1>idade: {card.ficha.idade}</h1>
-            <h1>sexo: {card.ficha.sexo}</h1>
+            <h1>{card.ficha.sexo}</h1>
             <h1>castrado(a): {card.ficha.castrado}</h1>
             <h1>tempo no abrigo: {card.ficha.tempoDeAbrigo}</h1>
           </div>

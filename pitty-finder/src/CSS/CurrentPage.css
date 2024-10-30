@@ -30,7 +30,7 @@
 }
 
 .current-datas h1 {
-  font-size: 20pt;
+  font-size: 1.2rem;
   margin-top: 10px;
 }
 
@@ -41,17 +41,18 @@
 }
 
 .description-name {
-  font-size: 86pt;
-  line-height: 100px;
+  font-size: 4rem;
+  line-height: 60px;
 }
 
 .description-local {
-  font-size: 16pt;
+  font-size: 1rem;
+  margin-top: 20px;
   opacity: 0.5;
 }
 
 .description-insert {
-  font-size: 16pt;
+  font-size: 1rem;
   line-height: 30px;
   width: 90%;
 }
@@ -68,7 +69,7 @@
 }
 
 .contact p {
-  font-size: 14pt;
+  font-size: 1rem;
 }
 
 .current-description {

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 // components
 import Slide from "../../../components/slide/slide.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
-import Card from "../../../components/card/Card.jsx";
+import CardA from "../../../components/card/Card.jsx";
 import CustomButton from "../../../components/button/CustomButton.jsx";
 // constants
 import foto from "../../../constants/photos.js";
@@ -12,6 +12,7 @@ import "../../CSS/homepage.css";
 // databases
 import animals from "../../../databases/adopt.js";
 import abrigos from "../../../databases/abrigos.js";
+import CardMui from "../../../components/CardMUI.jsx";
 
 export default function HomePage() {
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ export default function HomePage() {
         <h1 className="title">Adote</h1>
         <div className="addict-card">
           {adote.map((item) => (
-            <Card
+            <CardMui
               key={item.id}
               onClick={() => handleCardClickAnimal(item.id)}
               image={item.foto}
@@ -67,7 +68,7 @@ export default function HomePage() {
         <h1 className="title">Abrigos</h1>
         <div className="house-card">
           {abrigo.map((item) => (
-            <Card
+            <CardMui
               key={item.id}
               onClick={() => handleCardClickAbrigo(item.id)}
               image={item.foto}

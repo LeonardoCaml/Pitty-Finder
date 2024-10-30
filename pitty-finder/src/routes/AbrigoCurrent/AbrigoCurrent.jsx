@@ -28,7 +28,7 @@ export default function Abrigo() {
       <div className="content">
         <div className="current-information">
           <img src={card.foto} alt="foto_abrigo" className="foto" />
-          <div className="current-data">
+          <div className="current-datas">
             <h1>local: {card.ficha.local.bairro + ", " + card.ficha.local.rua}</h1>
             <h1>data de fundação: {card.ficha.dataDeFundacao}</h1>
             <h1>contatos:</h1>
