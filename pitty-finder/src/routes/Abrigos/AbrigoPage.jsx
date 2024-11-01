@@ -4,12 +4,12 @@ import foto from "../../../constants/photos.js";
 // components
 import CustomInput from "../../../components/input/CustomInput.jsx";
 import CustomButton from "../../../components/button/CustomButton.jsx";
-import Card from "../../../components/card/Card.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 // databases
 import abrigo from "../../../databases/abrigos.js";
 //css
 import "../../CSS/DetailsPage.css";
+import CardMui from "../../../components/CardMUI.jsx";
 
 export default function AbrigoPage() {
   const navigate = useNavigate();
@@ -38,7 +38,7 @@ export default function AbrigoPage() {
         <div className="result-cards">
           <div className="cards">
             {abrigo.map((card) => (
-              <Card
+              <CardMui
                 key={card.id}
                 onClick={() => handleCardClick(card.id)}
                 image={card.foto}

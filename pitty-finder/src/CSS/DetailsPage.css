@@ -71,37 +71,9 @@
   justify-content: end;
   background-color: black;
 }
-
 .cards {
-  display: grid;
-  grid: auto-flow/repeat(5, 1fr);
-  gap: 15px;
-}
-
-.card {
-  border: 3px solid black;
-  border-radius: 10px;
-  width: 200px;
-  padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.card-image {
-  border: 3px solid black;
-  width: 200px;
-  border-radius: 10px;
-}
-
-.card-name {
-  margin: 10px 0px;
-  width: 200px;
-  height: auto;
-}
-
-.card-description {
-  color: rgba(0, 0, 0, 0.6);
-  margin: 10px 0px;
-  height: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
 }

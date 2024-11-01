@@ -6,7 +6,6 @@ import foto from "../../../constants/photos.js";
 // components
 import CustomInput from "../../../components/input/CustomInput.jsx";
 import CustomButton from "../../../components/button/CustomButton.jsx";
-import Card from "../../../components/card/Card.jsx";
 import Footer from "../../../components/footer/Footer.jsx";
 
 // databases
@@ -14,6 +13,8 @@ import animals from "../../../databases/adopt.js";
 
 //css
 import "../../CSS/DetailsPage.css";
+import CardMui from "../../../components/CardMUI.jsx";
+import FormSelectMui from "../../../components/FormSelectMUI.jsx";
 
 export default function AnimalPage() {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ export default function AnimalPage() {
       <div className="filter-detail">
         <h1 className="filter-title">filtro</h1>
         <div className="filter-search-inputs">
-          <CustomInput placeholder="animal" />
+          <FormSelectMui />
           <CustomInput placeholder="estado" />
           <CustomInput placeholder="cidade" />
           <CustomButton tittle="buscar" />
@@ -42,7 +43,7 @@ export default function AnimalPage() {
         <div className="result-cards">
           <div className="cards">
             {animals.map((card) => (
-              <Card
+              <CardMui
                 key={card.id}
                 onClick={() => handleCardClick(card.id)}
                 image={card.foto}
