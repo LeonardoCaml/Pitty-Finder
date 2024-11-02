@@ -1,20 +1,18 @@
 import { useNavigate } from "react-router-dom";
 
-// constants
-import foto from "../../../constants/photos.js";
-
 // components
 import CustomInput from "../../../components/input/CustomInput.jsx";
 import CustomButton from "../../../components/button/CustomButton.jsx";
-import Footer from "../../../components/footer/Footer.jsx";
+import Footer from "../../../components/Footer.jsx";
+import Header from "../../../components/Molecules/Header.jsx";
 
 // databases
 import animals from "../../../databases/adopt.js";
 
 //css
 import "../../CSS/DetailsPage.css";
-import CardMui from "../../../components/CardMUI.jsx";
-import FormSelectMui from "../../../components/FormSelectMUI.jsx";
+import CardMui from "../../../components/Atoms/CardMUI.jsx";
+import FormSelectMui from "../../../components/Atoms/FormSelectMUI.jsx";
 
 export default function AnimalPage() {
   const navigate = useNavigate();
@@ -25,10 +23,7 @@ export default function AnimalPage() {
 
   return (
     <div className="page-detail">
-      <header className="header-detail">
-        <img className="logo-detail" src={foto.logo} />
-        <h1 className="title-detail">Adoção</h1>
-      </header>
+      <Header/>
       <div className="filter-detail">
         <h1 className="filter-title">filtro</h1>
         <div className="filter-search-inputs">
@@ -54,7 +49,7 @@ export default function AnimalPage() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer/>
     </div>
   );
 }

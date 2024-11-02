@@ -9,6 +9,7 @@ import slide5 from "../src/assets/photos/5.png";
 import abrigo from "../src/assets/photos/Abrigos.png";
 import cachorro from "../src/assets/photos/cachorro.png";
 import gato from "../src/assets/photos/gato.png";
+import HomeSection from "../src/assets/photos/HomeSectionOneAnimal.png";
 
 //animais
 import mia from "../src/assets/photos/animais/pexels-cat-1.jpg";
@@ -59,6 +60,7 @@ export default {
   account,
   cachorro,
   gato,
+  HomeSection,
   empty,
   instagram,
   facebook,

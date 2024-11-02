@@ -9,7 +9,7 @@ import Footer from "../../../components/footer/Footer.jsx";
 import abrigo from "../../../databases/abrigos.js";
 //css
 import "../../CSS/DetailsPage.css";
-import CardMui from "../../../components/CardMUI.jsx";
+import CardMui from "../../../components/Atoms/CardMUI.jsx";
 
 export default function AbrigoPage() {
   const navigate = useNavigate();

@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // css
 import "./App.css";
@@ -16,10 +16,9 @@ import ArtigoPage from "./routes/Artigo/ArtigoPage.jsx";
 import PerfilPage from "./routes/Perfil/PerfilPage.jsx";
 
 function App() {
-
   const theme = createTheme({
     typography: {
-      fontFamily:  ["Poppins", 'serif'].join(',')
+      fontFamily: ["Poppins", "serif"].join(","),
     },
   });
 

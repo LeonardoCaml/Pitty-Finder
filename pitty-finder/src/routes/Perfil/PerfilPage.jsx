@@ -1,5 +1,4 @@
 // components
-import Card from "../../../components/card/Card";
 import SideBar from "../../../components/sidebar/SideBar";
 // database
 import abrigo from "../../../databases/abrigos";
