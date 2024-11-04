@@ -8,8 +8,8 @@ import abrigo from "../../../databases/abrigos";
 
 //components
 import foto from "../../../constants/photos";
-import CustomButton from "../../../components/button/CustomButton";
 import ReturnButton from "../../../components/returnbutton/ReturnButton";
+import ButtonMui from "../../../components/Atoms/ButtonMUI";
 
 export default function Abrigo() {
   const { id } = useParams();
@@ -51,8 +51,8 @@ export default function Abrigo() {
           <h2 className="description-local">{card.horarioDeFuncionamento}</h2>
           <p className="description-insert">{card.descricao}</p>
           <div className="button">
-            <CustomButton tittle="ajudar" className="button-addict" />
-            <CustomButton tittle="salvar" className="button-save" />
+            <ButtonMui tittle="ajudar" className="button-addict" />
+            <ButtonMui tittle="salvar" className="button-save" />
           </div>
         </div>
       </div>

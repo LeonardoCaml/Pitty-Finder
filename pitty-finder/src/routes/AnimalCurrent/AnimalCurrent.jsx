@@ -9,8 +9,8 @@ import animals from "../../../databases/adopt";
 
 //components
 import Header from "../../../components/Molecules/Header.jsx";
-import CustomButton from "../../../components/button/CustomButton";
 import Footer from "../../../components/footer/Footer";
+import ButtonMui from "../../../components/Atoms/ButtonMUI.jsx";
 
 export default function AnimalCurrent() {
   const { id } = useParams();
@@ -37,8 +37,8 @@ export default function AnimalCurrent() {
           <h2 className="description-local">casa de abrigo</h2>
           <p className="description-insert">{card.descricao}</p>
           <div className="button">
-            <CustomButton tittle="adotar" className="button-addict" />
-            <CustomButton tittle="salvar" className="button-save" />
+            <ButtonMui tittle="adotar" className="button-addict" />
+            <ButtonMui tittle="salvar" className="button-save" />
           </div>
         </div>
       </div>

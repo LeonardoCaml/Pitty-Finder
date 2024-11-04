@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import abrigos from "../../databases/abrigos.js";
 import CardMui from "../Atoms/CardMUI.jsx";
-import CustomButton from "../button/CustomButton.jsx";
+import ButtonMui from "../Atoms/ButtonMUI.jsx";
 import { Box, Container, Stack, Typography } from "@mui/material";
 
 export default function HomeSectionAbrigo() {
@@ -42,7 +42,7 @@ export default function HomeSectionAbrigo() {
       </Box>
       <Stack sx={{ alignItems: "end", marginY: 3 }}>
         <Link to="/abrigo">
-          <CustomButton tittle="Ver mais" />
+          <ButtonMui tittle="Ver mais" />
         </Link>
       </Stack>
     </Container>

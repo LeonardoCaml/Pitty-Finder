@@ -1,6 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material";
 import FormSelectMui from "../Atoms/FormSelectMUI";
-import CustomButton from "../button/CustomButton";
+import ButtonMui from "../Atoms/ButtonMUI";
 
 export default function FormAnimal() {
   return (
@@ -12,7 +12,12 @@ export default function FormAnimal() {
         <FormSelectMui formLabel="estado" />
         <FormSelectMui formLabel="cidade" />
         <FormSelectMui formLabel="bairro(opicional)" />
-        <CustomButton tittle="buscar" />
+        <ButtonMui
+          tittle="buscar"
+          customStyle={{
+            width: 200,
+          }}
+        />
       </Stack>
     </Container>
   );
