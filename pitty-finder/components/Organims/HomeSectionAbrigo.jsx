@@ -15,7 +15,7 @@ export default function HomeSectionAbrigo() {
   const abrigo = abrigos.slice(0, 5);
 
   return (
-    <Container maxWidth="xl">
+    <Container>
       <Typography variant="h3" fontWeight="700" fontSize="2rem" marginY={3}>
         Abrigos Parceiros
       </Typography>

@@ -1,6 +1,5 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 // css
 import "../../CSS/CurrentPage.css";
@@ -9,10 +8,9 @@ import "../../CSS/CurrentPage.css";
 import animals from "../../../databases/adopt";
 
 //components
-import foto from "../../../constants/photos";
+import Header from "../../../components/Molecules/Header.jsx";
 import CustomButton from "../../../components/button/CustomButton";
 import Footer from "../../../components/footer/Footer";
-import ReturnButton from "../../../components/returnbutton/ReturnButton";
 
 export default function AnimalCurrent() {
   const { id } = useParams();
@@ -24,13 +22,10 @@ export default function AnimalCurrent() {
 
   return (
     <div className="page-current">
-      <header className="header-current">
-        <img className="logo-current" src={foto.logo} alt="logo_image" />
-        <ReturnButton />
-      </header>
+      <Header/>
       <div className="content">
         <div className="current-information">
-          <img src={card.foto} alt="foto_animal" className="foto" />
+          <img src={card.foto} alt="foto_animal" style={{ width: 300 }} />
           <div className="current-datas">
             <h1>{card.ficha.sexo}</h1>
             <h1>castrado(a): {card.ficha.castrado}</h1>

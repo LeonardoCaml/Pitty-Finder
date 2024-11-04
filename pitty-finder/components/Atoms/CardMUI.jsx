@@ -5,11 +5,12 @@ export default function CardMui({ image, title, description, onClick }) {
     <Card
       onClick={onClick}
       sx={{
-        width: 220,
-        minheight: 300,
+        width: 200,
+        minheight: 250,
         border: "3px solid",
         boxShadow: "none",
         borderRadius: "15px",
+        cursor: "pointer",
       }}
     >
       <CardContent
@@ -22,17 +23,16 @@ export default function CardMui({ image, title, description, onClick }) {
       >
         <CardMedia
           component="img"
-          height="180"
+          height="150"
           image={image}
           alt="foto do animal"
           sx={{ border: "3px solid", borderRadius: "15px" }}
         />
         <Typography
-          variant="h1"
+          variant="h5"
           component="div"
           sx={{
-            width: 190,
-            fontSize: "1.5rem",
+            width: 170,
             fontWeight: "600",
             marginY: 1,
             textWrap: "nowrap",
@@ -47,7 +47,7 @@ export default function CardMui({ image, title, description, onClick }) {
           color="textSecondary"
           component="div"
           sx={{
-            width: 190,
+            width: 170,
             textWrap: "nowrap",
             overflow: "hidden",
             textOverflow: "ellipsis",

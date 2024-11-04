@@ -3,9 +3,9 @@ import foto from "../../constants/photos.js";
 
 export default function HomeSectionOne() {
   return (
-    <Container maxWidth="xl">
+    <Container>
       <Stack direction="row" alignItems="center" justifyContent="space-between">
-        <Stack direction="column" spacing={3} marginY={10}>
+        <Stack direction="column" spacing={3} marginY={5}>
           <Typography variant="h3" fontWeight="700" width={550}>
             Encontre seu melhor amigo no PittyFinder
           </Typography>
@@ -27,7 +27,7 @@ export default function HomeSectionOne() {
             e faça a diferença!
           </Typography>
         </Stack>
-        <img src={foto.HomeSection} height={500} />
+        <img src={foto.HomeSection} height={400} />
       </Stack>
     </Container>
   );

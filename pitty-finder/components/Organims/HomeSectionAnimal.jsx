@@ -15,8 +15,8 @@ export default function HomeSectionAnimal() {
   const adote = animals.slice(0, 5);
 
   return (
-    <Container maxWidth="xl">
-      <Typography variant="h3" fontWeight="700" fontSize="2rem" marginY={3}>
+    <Container>
+      <Typography variant="h3" fontWeight="700" marginY={3}>
         Animais para Adoção
       </Typography>
       <Typography
@@ -29,9 +29,7 @@ export default function HomeSectionAnimal() {
         Conheça nossos amigos peludos que estão prontos para encontrar um lar
         amoroso! Cada um deles foi resgatado e espera por uma família especial.
       </Typography>
-      <Box
-        sx={{ display: "flex", justifyContent: "space-between" }}
-      >
+      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         {adote.map((item) => (
           <CardMui
             key={item.id}
