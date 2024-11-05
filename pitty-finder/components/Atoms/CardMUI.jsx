@@ -1,6 +1,6 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
-export default function CardMui({ image, title, description, onClick }) {
+export default function CardMui({ image, title, description, onClick, style }) {
   return (
     <Card
       onClick={onClick}
@@ -11,6 +11,7 @@ export default function CardMui({ image, title, description, onClick }) {
         boxShadow: "none",
         borderRadius: "15px",
         cursor: "pointer",
+        ...(style && style)
       }}
     >
       <CardContent
@@ -19,6 +20,7 @@ export default function CardMui({ image, title, description, onClick }) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
+          ...(style && style)
         }}
       >
         <CardMedia
