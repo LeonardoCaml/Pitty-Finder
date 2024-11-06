@@ -40,6 +40,7 @@ const animals = [
     especie: "cachorro",
     descricao: "Buddy é um cachorro brincalhão e afetuoso, conhecido por sua energia contagiante. Ele adora correr e brincar ao ar livre, especialmente com crianças. Buddy é muito inteligente e aprende comandos rapidamente, o que o torna fácil de treinar. Além de ser um ótimo companheiro para atividades físicas, ele também é extremamente leal e protetor. Buddy está à procura de uma família ativa que possa acompanhá-lo em suas aventuras diárias.",
     ficha: {
+      raca: 'vira-lata',
       idade: "filhote",
       sexo: "masculino",
       castrado: "não",
