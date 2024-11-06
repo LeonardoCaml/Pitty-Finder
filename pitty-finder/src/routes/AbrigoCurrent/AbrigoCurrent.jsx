@@ -1,16 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import "../../CSS/CurrentPage.css";
 
 import abrigo from "../../../databases/abrigos";
-import animais from "../../../databases/adopt.js";
-import CardMui from "../../../components/Atoms/CardMUI.jsx";
 
 import Footer from "../../../components/Molecules/Footer";
 import Header from "../../../components/Molecules/Header";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Container, Stack, Typography } from "@mui/material";
 
 import ContactAbrigo from "../../../components/Organims/ContactAbrigo";
+import PaginatedCard from "../../../components/Organims/PaginatedCard.jsx";
 
 export default function Abrigo() {
   const { id } = useParams();
@@ -65,34 +63,7 @@ export default function Abrigo() {
 
             {/* animais */}
 
-            <Stack sx={{ width: "100%", heigth: 400 }}>
-              <Stack>
-                <Typography variant="h5" fontWeight={700} py={2}>
-                  Animais para Adoção no Abrigo
-                </Typography>
-              </Stack>
-              <Box sx={{ display: "flex", flexWrap: "wrap" }}>
-                {animais.map((card) => (
-                  <Box
-                    sx={{
-                      scale: 0.8,
-                      width: 200,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <CardMui
-                      key={card.id}
-                      onClick={() => handleCardClick(card.id)}
-                      image={card.foto}
-                      title={card.nome}
-                      description={card.cidade + " / " + card.estado}
-                    />
-                  </Box>
-                ))}
-              </Box>
-            </Stack>
+            <PaginatedCard />
           </Stack>
         </Stack>
       </Container>
