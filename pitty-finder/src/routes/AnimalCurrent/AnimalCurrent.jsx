@@ -1,10 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import animals from "../../../databases/adopt";
+import animals from "../../../databases/adopt.js";
+import abrigo from "../../../databases/abrigos.js";
 
 import Header from "../../../components/Molecules/Header.jsx";
 import Footer from "../../../components/Molecules/Footer.jsx";
 import ButtonMui from "../../../components/Atoms/ButtonMUI.jsx";
+import CardMui from "../../../components/Atoms/CardMUI.jsx";
 import {
   Box,
   Container,
@@ -42,7 +44,7 @@ export default function AnimalCurrent() {
             <Typography>Tamanho</Typography>
             <Typography>Status de castração</Typography>
           </Stack>
-          <Stack spacing={2}>
+          <Stack spacing={4}>
             <Stack>
               <Typography variant="h2" fontWeight={700}>
                 {card.nome}
@@ -59,7 +61,14 @@ export default function AnimalCurrent() {
               </Typography>
             </Stack>
             <Stack direction="row" spacing={3}>
-              <List sx={{ width: 250, background: "#f2f2f2", borderRadius: 3 }}>
+              <List
+                sx={{
+                  width: 250,
+                  minHeighteight: 200,
+                  background: "#f2f2f2",
+                  borderRadius: 3,
+                }}
+              >
                 <ListItem
                   sx={{
                     display: "flex",
@@ -68,7 +77,7 @@ export default function AnimalCurrent() {
                     width: "100%",
                   }}
                 >
-                  <Typography>Personalidade:</Typography>
+                  <Typography variant="h6">Personalidade:</Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -90,7 +99,7 @@ export default function AnimalCurrent() {
                     width: "100%",
                   }}
                 >
-                  <Typography>Preferências:</Typography>
+                  <Typography variant="h6">Preferências:</Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -111,7 +120,7 @@ export default function AnimalCurrent() {
                     width: "100%",
                   }}
                 >
-                  <Typography>Histórico:</Typography>
+                  <Typography variant="h6">Histórico:</Typography>
                   <Box
                     sx={{
                       display: "flex",
@@ -124,32 +133,76 @@ export default function AnimalCurrent() {
                   </Box>
                 </ListItem>
               </List>
-              <List sx={{ width: 250, background: "#f2f2f2", borderRadius: 3 }}>
-                <ListItem>
-                  <Typography>Status de vacinação</Typography>
+              <List
+                sx={{
+                  width: 250,
+                  minHeighteight: 200,
+                  background: "#f2f2f2",
+                  borderRadius: 3,
+                }}
+              >
+                <ListItem
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "start",
+                    width: "100%",
+                  }}
+                >
+                  <Typography variant="h6">Status de vacinação</Typography>
+                  <BulletCard>vacinado</BulletCard>
                 </ListItem>
-                <ListItem>
-                  <Typography>
-                    Histórico médico, se relevante (ex.: passou por cirurgias,
-                    tratamentos recentes)
-                  </Typography>
+                <ListItem
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "start",
+                    width: "100%",
+                  }}
+                >
+                  <Typography variant="h6">Histórico médico:</Typography>
+                  <BulletCard>nenhuma observação</BulletCard>
                 </ListItem>
               </List>
-              <List sx={{ width: 250, background: "#f2f2f2", borderRadius: 3 }}>
-                <ListItem>
-                  <Typography>Status de vacinação</Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography>
-                    Histórico médico, se relevante (ex.: passou por cirurgias,
-                    tratamentos recentes)
-                  </Typography>
+              <List
+                sx={{
+                  width: 250,
+                  minHeighteight: 200,
+                  background: "#f2f2f2",
+                  borderRadius: 3,
+                }}
+              >
+                <ListItem
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    width: "100%",
+                    gap: 2,
+                  }}
+                >
+                  <Typography variant="h6">Abrigo responsável</Typography>
+                  <Stack spacing={2} alignItems="center">
+                    <img
+                      alt="abrigo"
+                      src={abrigo[0].foto}
+                      style={{
+                        width: 130,
+                        height: 130,
+                        objectFit: "cover",
+                        borderRadius: "50%",
+                      }}
+                    />
+                    <Typography variant="h6" fontWeight={700}>
+                      {abrigo[0].nome}
+                    </Typography>
+                  </Stack>
                 </ListItem>
               </List>
             </Stack>
             <Stack spacing={2}>
-              <ButtonMui tittle="adotar" className="button-addict" />
-              <ButtonMui tittle="salvar" className="button-save" />
+              <ButtonMui tittle="adotar" />
+              <ButtonMui tittle="salvar" />
             </Stack>
           </Stack>
         </Stack>

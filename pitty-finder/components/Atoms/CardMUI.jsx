@@ -7,11 +7,11 @@ export default function CardMui({ image, title, description, onClick, style }) {
       sx={{
         width: 200,
         minheight: 250,
-        border: "3px solid",
+        border: 3,
         boxShadow: "none",
-        borderRadius: "15px",
+        borderRadius: 4,
         cursor: "pointer",
-        ...(style && style)
+        ...(style && style),
       }}
     >
       <CardContent
@@ -20,15 +20,14 @@ export default function CardMui({ image, title, description, onClick, style }) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          ...(style && style)
+          ...(style && style),
         }}
       >
         <CardMedia
           component="img"
-          height="150"
           image={image}
           alt="foto do animal"
-          sx={{ border: "3px solid", borderRadius: "15px" }}
+          sx={{ border: 3, borderRadius: 3, height: 150 }}
         />
         <Typography
           variant="h5"
