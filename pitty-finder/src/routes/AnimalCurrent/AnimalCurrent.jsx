@@ -64,8 +64,12 @@ export default function AnimalCurrent() {
                 <Typography fontWeight={700}>
                   Sexo: {card.ficha.sexo}
                 </Typography>
-                <Typography fontWeight={700}>Tamanho</Typography>
-                <Typography fontWeight={700}>Status de castração</Typography>
+                <Typography fontWeight={700}>
+                  Tamanho: {card.ficha.tamanho}
+                </Typography>
+                <Typography fontWeight={700}>
+                  Status de castração: {card.ficha.castrado}
+                </Typography>
               </Stack>
               <Stack spacing={2}>
                 <ButtonMui tittle="adotar" customStyle={{ width: 200 }} />
