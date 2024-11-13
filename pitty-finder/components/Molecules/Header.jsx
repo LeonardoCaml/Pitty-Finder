@@ -1,16 +1,41 @@
 import foto from "../../constants/photos.js";
-import { Avatar, Container, Divider, Stack, Typography } from "@mui/material";
+import {
+  Avatar,
+  Box,
+  Container,
+  Divider,
+  Stack,
+  Typography,
+} from "@mui/material";
 
 export default function Header() {
   return (
-    <Container>
+    <Container
+      sx={{
+        maxWidth: {
+          xs: "450px",
+          sm: "1200px",
+        },
+      }}
+    >
       <Stack
         direction="row"
-        height={150}
         justifyContent="space-between"
         alignItems="center"
+        height={80}
+        marginY={2}
       >
-        <img src={foto.logo} alt="logo-pitty-finder" width={250} />
+        <Box
+          component="img"
+          src={foto.logo}
+          alt="logo-pitty-finder"
+          sx={{
+            width: {
+              xs: 150,
+              sm: 250,
+            },
+          }}
+        />
         <Stack direction="row" alignItems="center" spacing={2}>
           <Stack
             direction="row"
@@ -19,25 +44,51 @@ export default function Header() {
             divider={
               <Divider orientation="vertical" variant="middle" flexItem />
             }
+            sx={{
+              fontSize: {
+                xs: "0.3rem",
+                sm: "1rem",
+              },
+            }}
           >
             <Typography
               variant="body1"
               fontWeight="500"
-              fontSize="1rem"
-              sx={{ cursor: "pointer" }}
+              sx={{
+                cursor: "pointer",
+                fontSize: {
+                  xs: ".8rem",
+                  sm: "1rem",
+                },
+              }}
             >
               Entrar
             </Typography>
             <Typography
               variant="body1"
               fontWeight="500"
-              fontSize="1rem"
-              sx={{ cursor: "pointer" }}
+              sx={{
+                cursor: "pointer",
+                fontSize: {
+                  xs: ".8rem",
+                  sm: "1rem",
+                },
+              }}
             >
               Criar Conta
             </Typography>
           </Stack>
-          <Avatar alt="personal-icon" src={foto.account} width={40} />
+          <Avatar
+            alt="personal-icon"
+            src={foto.account}
+            width={40}
+            sx={{
+              display: {
+                sm: "block",
+                xs: "none",
+              },
+            }}
+          />
         </Stack>
       </Stack>
     </Container>

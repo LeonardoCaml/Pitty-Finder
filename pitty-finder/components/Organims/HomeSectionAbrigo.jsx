@@ -15,7 +15,14 @@ export default function HomeSectionAbrigo() {
   const abrigo = abrigos.slice(0, 5);
 
   return (
-    <Container>
+    <Container
+      sx={{
+        maxWidth: {
+          xs: "450px",
+          sm: "1200px",
+        },
+      }}
+    >
       <Typography variant="h3" fontWeight="700" fontSize="2rem" marginY={3}>
         Abrigos Parceiros
       </Typography>
@@ -24,12 +31,24 @@ export default function HomeSectionAbrigo() {
         fontWeight="500"
         fontSize="1rem"
         marginY={3}
-        width={700}
+        width={{ sm: 700, xs: "100%" }}
       >
         Explore nossos abrigos parceiros, cada um dedicado ao resgate e cuidado
         de animais em busca de uma segunda chance.
       </Typography>
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          overflowX: "auto",
+          whiteSpace: "nowrap",
+          scrollbarWidth: "none",
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          gap: 2,
+        }}
+      >
         {abrigo.map((item) => (
           <CardMui
             key={item.id}

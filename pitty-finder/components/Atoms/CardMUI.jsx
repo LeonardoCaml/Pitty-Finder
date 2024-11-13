@@ -5,6 +5,7 @@ export default function CardMui({ image, title, description, onClick, style }) {
     <Card
       onClick={onClick}
       sx={{
+        minWidth: 200,
         width: 200,
         minheight: 250,
         border: 3,

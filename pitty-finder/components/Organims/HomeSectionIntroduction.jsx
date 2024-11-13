@@ -1,15 +1,36 @@
-import { Container, Stack, Typography } from "@mui/material";
+import { Container, Stack, Typography, Box } from "@mui/material";
 import foto from "../../constants/photos.js";
 
 export default function HomeSectionOne() {
   return (
-    <Container>
-      <Stack direction="row" alignItems="center" justifyContent="space-between">
-        <Stack direction="column" spacing={3} marginY={5}>
-          <Typography variant="h3" fontWeight="700" width={550}>
+    <Container
+      sx={{
+        maxWidth: {
+          xs: "450px",
+          sm: "1200px",
+        },
+      }}
+    >
+      <Stack
+        direction={{ lg: "row", xs: "column" }}
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <Stack direction="column" spacing={3} marginY={{ sm: 7, sx: 5 }}>
+          <Typography
+            variant="h3"
+            fontWeight="700"
+            width={{ sm: 550, xs: "100%" }}
+            fontSize={{ sm: "2rem" }}
+          >
             Encontre seu melhor amigo no PittyFinder
           </Typography>
-          <Typography variant="body1" fontWeight="500" width={660}>
+          <Typography
+            variant="body1"
+            fontWeight="500"
+            width={{ sm: 660, xs: "100%" }}
+            fontSize={{ sm: "1rem" }}
+          >
             No PittyFinder, acreditamos que todo animal merece um lar cheio de
             amor e carinho. Somos uma plataforma dedicada a conectar pessoas que
             querem adotar animais resgatados aos abrigos e ONGs de sua região.
@@ -27,7 +48,12 @@ export default function HomeSectionOne() {
             e faça a diferença!
           </Typography>
         </Stack>
-        <img src={foto.HomeSection} height={400} />
+        <Box
+          component="img"
+          src={foto.HomeSection}
+          height={{ sm: 400, xs: 300 }}
+          display={{ xs: "none", sm: "block" }}
+        />
       </Stack>
     </Container>
   );
