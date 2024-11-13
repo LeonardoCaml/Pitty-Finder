@@ -14,7 +14,8 @@ export default function Header() {
       sx={{
         maxWidth: {
           xs: "450px",
-          sm: "1200px",
+          sm: "700px",
+          md: "1200px",
         },
       }}
     >
@@ -32,7 +33,7 @@ export default function Header() {
           sx={{
             width: {
               xs: 150,
-              sm: 250,
+              md: 250,
             },
           }}
         />
@@ -47,7 +48,7 @@ export default function Header() {
             sx={{
               fontSize: {
                 xs: "0.3rem",
-                sm: "1rem",
+                md: "1rem",
               },
             }}
           >
@@ -58,7 +59,7 @@ export default function Header() {
                 cursor: "pointer",
                 fontSize: {
                   xs: ".8rem",
-                  sm: "1rem",
+                  md: "1rem",
                 },
               }}
             >
@@ -71,7 +72,7 @@ export default function Header() {
                 cursor: "pointer",
                 fontSize: {
                   xs: ".8rem",
-                  sm: "1rem",
+                  md: "1rem",
                 },
               }}
             >
@@ -84,7 +85,7 @@ export default function Header() {
             width={40}
             sx={{
               display: {
-                sm: "block",
+                md: "block",
                 xs: "none",
               },
             }}
