@@ -28,15 +28,35 @@ export default function AnimalCurrent() {
       <Header />
       <Container sx={{ mb: 10 }}>
         <Stack spacing={4}>
-          <Stack direction="row" spacing={10}>
-            <Stack sx={{ borderRadius: "50%", overflow: "hidden" }}>
+          <Stack
+            direction={{ xs: "column", sm: "row" }}
+            alignItems="center"
+            spacing={{ xs: 2, sm: 10 }}
+          >
+            <Stack
+              sx={{
+                minWidth: 200,
+                width: 200,
+                minHeight: 100,
+                height: 200,
+                borderRadius: "50%",
+                overflow: "hidden",
+              }}
+            >
               <img
                 src={card.foto}
                 alt="foto_animal"
-                style={{ width: 200, height: 200, objectFit: "cover" }}
+                style={{
+                  width: 200,
+                  height: 200,
+                  objectFit: "cover",
+                }}
               />
             </Stack>
-            <Stack>
+            <Stack
+              direction="column"
+              alignItems={{ xs: "center", sm: "start" }}
+            >
               <Typography variant="h2" fontWeight={700}>
                 {card.nome}
               </Typography>
@@ -47,14 +67,18 @@ export default function AnimalCurrent() {
               >
                 casa de abrigo
               </Typography>
-              <Typography variant="body1" width={800}>
+              <Typography
+                variant="body1"
+                width={{ xs: "80%", sm: 800 }}
+                textAlign={{ xs: "center", md: "start" }}
+              >
                 {card.descricao}
               </Typography>
             </Stack>
           </Stack>
-          <Stack direction="row" spacing={10}>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={10}>
             <Stack spacing={2}>
-              <Stack spacing={1}>
+              <Stack spacing={1} alignItems={{ xs: "center", sm: "start" }}>
                 <Typography fontWeight={700}>
                   Raça: {card.ficha.raca}
                 </Typography>
@@ -71,13 +95,17 @@ export default function AnimalCurrent() {
                   Status de castração: {card.ficha.castrado}
                 </Typography>
               </Stack>
-              <Stack spacing={2}>
-                <ButtonMui tittle="adotar" customStyle={{ width: 200 }} />
-                <ButtonMui tittle="salvar" customStyle={{ width: 200 }} />
+              <Stack spacing={2} alignItems={{ xs: "center", sm: "start" }}>
+                <ButtonMui tittle="adotar" customStyle={{ width: {xs: "80%", sm: 200} }} />
+                <ButtonMui tittle="salvar" customStyle={{ width: {xs: "80%", sm: 200} }} />
               </Stack>
             </Stack>
             <Stack spacing={4}>
-              <Stack direction="row" spacing={3}>
+              <Stack
+                direction={{ xs: "column", sm: "row" }}
+                alignItems={{ xs: "center", sm: "start" }}
+                spacing={3}
+              >
                 <List
                   sx={{
                     width: 250,
