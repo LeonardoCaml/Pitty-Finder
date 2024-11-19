@@ -15,7 +15,7 @@ export default function Header() {
         maxWidth: {
           xs: "450px",
           sm: "700px",
-          lg: "1000px",
+          lg: "1200px",
         },
       }}
     >

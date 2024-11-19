@@ -52,7 +52,7 @@ export default function HomeSectionOne() {
           component="img"
           src={foto.HomeSection}
           height={{ sm: 400, xs: 300 }}
-          display={{ xs: "none", sm: "none", lg: "block" }}
+          my={2}
         />
       </Stack>
     </Container>
