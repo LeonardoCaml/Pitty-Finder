@@ -31,7 +31,7 @@ export default function HomeSectionAbrigo() {
         fontWeight="500"
         fontSize="1rem"
         marginY={3}
-        width={{ sm: 700, xs: "100%" }}
+        width="100%"
       >
         Explore nossos abrigos parceiros, cada um dedicado ao resgate e cuidado
         de animais em busca de uma segunda chance.

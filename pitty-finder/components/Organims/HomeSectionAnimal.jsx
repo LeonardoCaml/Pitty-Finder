@@ -38,7 +38,7 @@ export default function HomeSectionAnimal() {
         fontWeight="500"
         fontSize="1rem"
         marginY={3}
-        width={{ sm: 700, xs: "100%" }}
+        width='100%'
       >
         Conheça nossos amigos peludos que estão prontos para encontrar um lar
         amoroso! Cada um deles foi resgatado e espera por uma família especial.
