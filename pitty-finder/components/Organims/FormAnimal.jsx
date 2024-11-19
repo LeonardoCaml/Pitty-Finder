@@ -8,14 +8,18 @@ export default function FormAnimal() {
       <Typography variant="h3" fontSize="2rem" fontWeight={700} sx={{ my: 2 }}>
         filtro
       </Typography>
-      <Stack direction="row" justifyContent="space-between">
+      <Stack
+        direction={{ xs: "column", sm: "row" }}
+        justifyContent="space-between"
+        gap={2}
+      >
         <FormSelectMui formLabel="animal" />
         <FormSelectMui formLabel="estado" />
         <FormSelectMui formLabel="cidade" />
         <ButtonMui
           tittle="buscar"
           customStyle={{
-            width: 200,
+            width: { xs: "100%", sm: 200 },
           }}
         />
       </Stack>

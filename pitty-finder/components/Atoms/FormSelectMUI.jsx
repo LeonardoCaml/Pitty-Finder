@@ -4,7 +4,7 @@ import FormControl from "@mui/material/FormControl";
 export default function FormSelectMui({ formLabel }) {
   return (
     <Box>
-      <FormControl sx={{ minWidth: 250 }}>
+      <FormControl sx={{ minWidth: 250, width: {xs: '100%', sm: 270} }}>
         <InputLabel
           sx={{
             color: "gray",
