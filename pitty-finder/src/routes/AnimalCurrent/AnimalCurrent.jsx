@@ -69,7 +69,7 @@ export default function AnimalCurrent() {
               </Typography>
               <Typography
                 variant="body1"
-                width={{ xs: "80%", sm: 800 }}
+                width={{ xs: "90%", sm: 800 }}
                 textAlign={{ xs: "center", md: "start" }}
               >
                 {card.descricao}
@@ -96,8 +96,8 @@ export default function AnimalCurrent() {
                 </Typography>
               </Stack>
               <Stack spacing={2} alignItems={{ xs: "center", sm: "start" }}>
-                <ButtonMui tittle="adotar" customStyle={{ width: {xs: "80%", sm: 200} }} />
-                <ButtonMui tittle="salvar" customStyle={{ width: {xs: "80%", sm: 200} }} />
+                <ButtonMui tittle="adotar" customStyle={{ width: {xs: 250, sm: 200} }} />
+                <ButtonMui tittle="salvar" customStyle={{ width: {xs: 250, sm: 200} }} />
               </Stack>
             </Stack>
             <Stack spacing={4}>
