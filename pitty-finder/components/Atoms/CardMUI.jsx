@@ -1,13 +1,31 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  CardMedia,
+  Skeleton,
+  Typography,
+} from "@mui/material";
+
+import { useState, useEffect } from "react";
 
 export default function CardMui({ image, title, description, onClick, style }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 2500));
+      setIsLoading(false);
+    };
+    fetchData();
+  }, []);
+
   return (
     <Card
       onClick={onClick}
       sx={{
         minWidth: 200,
         width: 200,
-        minheight: 250,
+        height: 250,
         border: 3,
         boxShadow: "none",
         borderRadius: 4,
@@ -15,49 +33,53 @@ export default function CardMui({ image, title, description, onClick, style }) {
         ...(style && style),
       }}
     >
-      <CardContent
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          ...(style && style),
-        }}
-      >
-        <CardMedia
-          component="img"
-          image={image}
-          alt="foto do animal"
-          sx={{ border: 3, borderRadius: 3, height: 150 }}
-        />
-        <Typography
-          variant="h5"
-          component="div"
+      {isLoading ? (
+        <Skeleton variant="rounded" animation="wave" width={200} height={300} />
+      ) : (
+        <CardContent
           sx={{
-            width: 170,
-            fontWeight: "600",
-            marginY: 1,
-            textWrap: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            ...(style && style),
           }}
         >
-          {title}
-        </Typography>
-        <Typography
-          variant="body1"
-          color="textSecondary"
-          component="div"
-          sx={{
-            width: 170,
-            textWrap: "nowrap",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-          }}
-        >
-          {description}
-        </Typography>
-      </CardContent>
+          <CardMedia
+            component="img"
+            image={image}
+            alt="foto do animal"
+            sx={{ border: 3, borderRadius: 3, height: 150 }}
+          />
+          <Typography
+            variant="h5"
+            component="div"
+            sx={{
+              width: 170,
+              fontWeight: "600",
+              marginY: 1,
+              textWrap: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {title}
+          </Typography>
+          <Typography
+            variant="body1"
+            color="textSecondary"
+            component="div"
+            sx={{
+              width: 170,
+              textWrap: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {description}
+          </Typography>
+        </CardContent>
+      )}
     </Card>
   );
 }

@@ -13,7 +13,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import BulletCard from "../../../components/Atoms/bulletMUI.jsx";
+import BulletCard from "../../../components/Atoms/bulletMUI.tsx";
 
 export default function AnimalCurrent() {
   const { id } = useParams();

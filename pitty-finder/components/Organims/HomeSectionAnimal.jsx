@@ -4,15 +4,22 @@ import animals from "../../databases/adopt.js";
 import CardMui from "../Atoms/CardMUI.jsx";
 import ButtonMui from "../Atoms/ButtonMUI.jsx";
 import { Box, Container, Stack, Typography } from "@mui/material";
+import { useEffect, useState } from "react";
 
 export default function HomeSectionAnimal() {
+  
   const navigate = useNavigate();
 
   const handleCardClickAnimal = (id) => {
     navigate(`/adote/${id}`);
   };
 
+  const [dados, setDados] = useState([]);
   const adote = animals.slice(0, 5);
+
+  useEffect(() => {
+    setDados(adote);
+  }, []);
 
   return (
     <Container
@@ -31,7 +38,7 @@ export default function HomeSectionAnimal() {
         fontWeight="500"
         fontSize="1rem"
         marginY={3}
-        width={{sm: 700, xs: '100%'}}
+        width={{ sm: 700, xs: "100%" }}
       >
         Conheça nossos amigos peludos que estão prontos para encontrar um lar
         amoroso! Cada um deles foi resgatado e espera por uma família especial.
@@ -49,7 +56,7 @@ export default function HomeSectionAnimal() {
           gap: 2,
         }}
       >
-        {adote.map((item) => (
+        {adote.map((item, index) => (
           <CardMui
             key={item.id}
             onClick={() => handleCardClickAnimal(item.id)}

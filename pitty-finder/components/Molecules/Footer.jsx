@@ -1,12 +1,12 @@
 import foto from "../../constants/photos.js";
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography, Skeleton } from "@mui/material";
 
 export default function Footer() {
   return (
     <Stack
       direction="row"
-      height={{ sm: 185, xs: 130 }}
-      px={{ sm: 20, xs: 2 }}
+      height={{ md: 185, sm: 130, xs: 100 }}
+      px={{ md: 20, sm: 2, xs: 2 }}
       py={2}
       bgcolor="#F2F2F2"
     >
@@ -25,13 +25,13 @@ export default function Footer() {
           component="img"
           src={foto.logo}
           alt="logo-pitty-finder"
-          width={{ sm: 200, xs: 120 }}
+          width={{ md: 200, sm: 120, xs: 120 }}
           style={{ opacity: 0.6 }}
         />
         <Stack alignItems="center" spacing={2}>
           <Typography
             color="#616161"
-            fontSize={{ sm: "1rem", xs: ".6rem" }}
+            fontSize={{ md: "1rem", sm: ".7rem", xs: ".6rem" }}
             textAlign="center"
           >
             PittyFinder é uma plataforma de adoção responsável de animais em
@@ -39,7 +39,7 @@ export default function Footer() {
           </Typography>
           <Typography
             color="#616161"
-            fontSize={{ sm: "1rem", xs: ".6rem" }}
+            fontSize={{ md: "1rem", sm: ".7rem", xs: ".6rem" }}
             textAlign="center"
           >
             ©2024 pitty finder, Inc. Privacidade - Termos - Informações da
@@ -51,21 +51,21 @@ export default function Footer() {
             component="img"
             style={{ opacity: 0.6 }}
             src={foto.facebook}
-            width={{ sm: 30, xs: 20 }}
+            width={{ md: 30, sm: 20, xs: 15 }}
             alt=""
           />
           <Box
             component="img"
             style={{ opacity: 0.6 }}
             src={foto.instagram}
-            width={{ sm: 30, xs: 20 }}
+            width={{ md: 30, sm: 20, xs: 15 }}
             alt=""
           />
           <Box
             component="img"
             style={{ opacity: 0.6 }}
             src={foto.email}
-            width={{ sm: 30, xs: 20 }}
+            width={{ md: 30, sm: 20, xs: 15 }}
             alt=""
           />
         </Stack>

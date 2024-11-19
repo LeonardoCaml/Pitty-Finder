@@ -1,6 +1,10 @@
 import { Paper } from "@mui/material";
 
-export default function BulletCard({ children }) {
+type buttonProps = {
+  children: string;
+};
+
+export default function BulletCard({ children }: buttonProps) {
   return (
     <Paper
       variant="outlined"
