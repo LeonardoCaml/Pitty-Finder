@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import animals from "../../databases/adopt.js";
-import CardMui from "../Atoms/CardMUI.jsx";
-import ButtonMui from "../Atoms/ButtonMUI.jsx";
+import CardMui from "../Atoms/CardMUI.tsx";
+import ButtonMui from "../Atoms/ButtonMui";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 

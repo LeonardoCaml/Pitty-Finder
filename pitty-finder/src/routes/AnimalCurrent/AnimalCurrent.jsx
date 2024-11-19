@@ -4,7 +4,7 @@ import animals from "../../../databases/adopt.js";
 import abrigo from "../../../databases/abrigos.js";
 import Header from "../../../components/Molecules/Header.jsx";
 import Footer from "../../../components/Molecules/Footer.jsx";
-import ButtonMui from "../../../components/Atoms/ButtonMUI.jsx";
+import ButtonMui from "../../../components/Atoms/ButtonMui";
 import {
   Box,
   Container,

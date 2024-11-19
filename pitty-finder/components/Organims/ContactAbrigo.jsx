@@ -1,4 +1,4 @@
-import ButtonMui from "../../components/Atoms/ButtonMUI";
+import ButtonMui from "../../components/Atoms/ButtonMui";
 import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
 
 import abrigo from "../../databases/abrigos";

@@ -1,6 +1,12 @@
 import { Button } from "@mui/material";
 
-export default function ButtonMui({ tittle, onClick, customStyle }) {
+interface ButtonMuiProps {
+  tittle: string,
+  customStyle?: React.CSSProperties,
+  onClick: () => void,
+}
+
+export default function ButtonMui({ tittle, onClick, customStyle }: ButtonMuiProps) {
   return (
     <Button
       variant="outlined"
@@ -27,20 +33,20 @@ export default function ButtonMui({ tittle, onClick, customStyle }) {
           zIndex: -1,
           borderRadius: 2,
         },
-        "&:active": {
+        "&:hover": {
           top: 3,
           left: 3,
           color: "white",
           backgroundColor: "black",
           borderColor: "black",
         },
-        "&:active::before": {
+        "&:hover::before": {
           top: 0,
           left: 0,
           color: "black",
           backgroundColor: "black",
         },
-        ...(customStyle && customStyle),
+        ...(customStyle ? customStyle : {}),
       }}
     >
       {tittle}

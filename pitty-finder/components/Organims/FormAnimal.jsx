@@ -1,6 +1,6 @@
 import { Container, Stack, Typography } from "@mui/material";
 import FormSelectMui from "../Atoms/FormSelectMUI";
-import ButtonMui from "../Atoms/ButtonMUI";
+import ButtonMui from "../Atoms/ButtonMui";
 
 export default function FormAnimal() {
   return (

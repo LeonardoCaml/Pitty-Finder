@@ -1,5 +1,5 @@
 import animais from "../../databases/adopt.js";
-import CardMui from "../Atoms/CardMUI.jsx";
+import CardMui from "../Atoms/CardMUI.tsx";
 import { Box, Grid2, Pagination, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 

@@ -15,7 +15,12 @@ interface CardMuiProps {
   onClick: () => void;
 }
 
-export default function CardMui({ image, title, description, onClick }: CardMuiProps) {
+export default function CardMui({
+  image,
+  title,
+  description,
+  onClick,
+}: CardMuiProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -40,7 +45,23 @@ export default function CardMui({ image, title, description, onClick }: CardMuiP
       }}
     >
       {isLoading ? (
-        <Skeleton variant="rounded" animation="wave" width={200} height={300} />
+        <CardContent
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Skeleton
+            variant="rounded"
+            animation="wave"
+            width={170}
+            height={150}
+          />
+          <Skeleton variant="text" animation="wave" width={170} height={40} />
+          <Skeleton variant="text" animation="wave" width={170} height={40} />
+        </CardContent>
       ) : (
         <CardContent
           sx={{
