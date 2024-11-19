@@ -8,8 +8,15 @@ import {
 
 import { useState, useEffect } from "react";
 
-export default function CardMui({ image, title, description, onClick, style }) {
-  const [isLoading, setIsLoading] = useState(true);
+interface CardMuiProps {
+  image: string;
+  title: string;
+  description: string;
+  onClick: () => void;
+}
+
+export default function CardMui({ image, title, description, onClick }: CardMuiProps) {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +37,6 @@ export default function CardMui({ image, title, description, onClick, style }) {
         boxShadow: "none",
         borderRadius: 4,
         cursor: "pointer",
-        ...(style && style),
       }}
     >
       {isLoading ? (
@@ -42,7 +48,6 @@ export default function CardMui({ image, title, description, onClick, style }) {
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "center",
-            ...(style && style),
           }}
         >
           <CardMedia

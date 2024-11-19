@@ -60,9 +60,6 @@ export default function Abrigo() {
           </Stack>
           <Stack direction="row" spacing={2} my={4}>
             <ContactAbrigo />
-
-            {/* animais */}
-
             <PaginatedCard />
           </Stack>
         </Stack>
