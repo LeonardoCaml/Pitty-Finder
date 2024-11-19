@@ -24,8 +24,8 @@ export default function Abrigo() {
       <Container>
         <Stack direction="column" justifyContent="start">
           <Stack
-            direction="row"
-            spacing={2}
+            direction={{ xs: "column", sm: "row" }}
+            spacing={{ xs: 2, sm: 10 }}
             sx={{
               display: "flex",
               alignItems: "center",
@@ -44,8 +44,17 @@ export default function Abrigo() {
                 }}
               />
             </Stack>
-            <Stack gap={1}>
-              <Typography variant="h2" fontWeight={700}>
+            <Stack
+              direction="column"
+              alignItems={{ xs: "center", sm: "start" }}
+              gap={2}
+            >
+              <Typography
+                variant="h2"
+                fontWeight={700}
+                width={{ xs: 350, sm: "100%" }}
+                textAlign={{ xs: "center", sm: "start" }}
+              >
                 {card.nome}
               </Typography>
               <Typography
@@ -55,10 +64,15 @@ export default function Abrigo() {
               >
                 {card.horarioDeFuncionamento}
               </Typography>
-              <Typography width={700}>{card.descricao}</Typography>
+              <Typography
+                width={{ xs: "90%", sm: 700 }}
+                textAlign={{ xs: "center", md: "start" }}
+              >
+                {card.descricao}
+              </Typography>
             </Stack>
           </Stack>
-          <Stack direction="row" spacing={2} my={4}>
+          <Stack direction={{ xs: "column", sm: "row" }} spacing={2} my={4} alignItems={{ xs: "center", sm: "start" }}>
             <ContactAbrigo />
             <PaginatedCard />
           </Stack>

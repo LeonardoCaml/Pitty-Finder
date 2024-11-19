@@ -17,15 +17,21 @@ export default function PaginatedCard() {
 
   return (
     <Stack sx={{ width: "100%", heigth: 400 }} spacing={2}>
-      <Stack>
-        <Typography variant="h5" fontWeight={700} py={2}>
+      <Stack alignItems={{ xs: "center", sm: "start" }}>
+        <Typography variant="h5" fontWeight={700} py={2} ml={{ xs: 0, sm: 3 }}>
           Animais para Adoção no Abrigo
         </Typography>
       </Stack>
       <Box>
         <Grid2 container>
           {currentCards.map((card) => (
-            <Grid2 size={3} sx={{ scale: 0.8 }}>
+            <Grid2
+              size={{
+                xs: 6,
+                sm: 3,
+              }}
+              sx={{ scale: 0.8, alignItems: "center" }}
+            >
               <CardMui
                 key={card.id}
                 onClick={() => handleCardClick(card.id)}

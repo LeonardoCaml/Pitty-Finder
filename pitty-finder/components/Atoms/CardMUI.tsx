@@ -41,7 +41,7 @@ export default function CardMui({
         border: 3,
         boxShadow: "none",
         borderRadius: 4,
-        cursor: "pointer",
+        cursor: "pointer"
       }}
     >
       {isLoading ? (
