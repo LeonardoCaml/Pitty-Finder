@@ -22,7 +22,7 @@ export default function FilterResultAnimal() {
             display: "flex",
             justifyContent: "center",
             flexWrap: "wrap",
-            gap: 4,
+            gap: { xs: 2, sm: 4 },
           }}
         >
           {animals.map((card) => (
