@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import ScrollTop from "./scrollTop";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 // css
@@ -32,6 +32,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <ScrollTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/adote" element={<AnimalPage />} />
