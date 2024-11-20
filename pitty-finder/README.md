@@ -36,10 +36,10 @@ Pitty Finder é um projeto de front-end para uma página de adoção de animais 
 
 Aqui estão as principais dependências do projeto que serão instaladas ao rodar `npm install` ou `yarn install`:
 
-`react` - Biblioteca para construir interfaces de usuário.
-`react-dom` - Conecta o React com o DOM.
-`react-router-dom` - Para gerenciar navegação no React.
-`Material UI` - Biblioteca de componentes React.
+- `react` - Biblioteca para construir interfaces de usuário.
+- `react-dom` - Conecta o React com o DOM.
+- `react-router-dom` - Para gerenciar navegação no React.
+- `Material UI` - Biblioteca de componentes React.
 
 Essas dependências são essenciais para rodar o projeto corretamente.
 
@@ -47,9 +47,9 @@ Essas dependências são essenciais para rodar o projeto corretamente.
 
 Além das dependências principais, o projeto também possui dependências de desenvolvimento, como:
 
-`eslint` - Ferramenta para análise estática de código.
-`webpack` - Empacotador de módulos.
-`babel` - Transpiler para JavaScript moderno.
+- `eslint` - Ferramenta para análise estática de código.
+- `webpack` - Empacotador de módulos.
+- `babel` - Transpiler para JavaScript moderno.
 
 Essas dependências são usadas apenas durante o desenvolvimento e não são necessárias para rodar o aplicativo em produção.
 
@@ -61,6 +61,6 @@ Essas dependências são usadas apenas durante o desenvolvimento e não são nec
 
 Isso mostrará as dependências principais no seu projeto.
 
-Se você está usando o yarn, execute:
-    ```bash
-    yarn list --depth=0
+- Se você está usando o yarn, execute:
+  ```bash
+  yarn list --depth=0
