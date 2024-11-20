@@ -31,3 +31,36 @@ Pitty Finder é um projeto de front-end para uma página de adoção de animais 
 - `databases/:` Base de dados utilizados para simular um banco de dados
 - `constants/:` Icones, fotos e outros elementos em forma de variável exportável 
 - `components/:` Carrega todos os componentes do site em diferentes escalas
+
+# Dependências Principais
+
+Aqui estão as principais dependências do projeto que serão instaladas ao rodar `npm install` ou `yarn install`:
+
+`react` - Biblioteca para construir interfaces de usuário.
+`react-dom` - Conecta o React com o DOM.
+`react-router-dom` - Para gerenciar navegação no React.
+`Material UI` - Biblioteca de componentes React.
+
+Essas dependências são essenciais para rodar o projeto corretamente.
+
+# Dependências de Desenvolvimento
+
+Além das dependências principais, o projeto também possui dependências de desenvolvimento, como:
+
+`eslint` - Ferramenta para análise estática de código.
+`webpack` - Empacotador de módulos.
+`babel` - Transpiler para JavaScript moderno.
+
+Essas dependências são usadas apenas durante o desenvolvimento e não são necessárias para rodar o aplicativo em produção.
+
+### Como pegar as dependências principais para listar:
+
+- Se você está usando o **npm**, execute:
+  ```bash
+  npm list --depth=0
+
+Isso mostrará as dependências principais no seu projeto.
+
+Se você está usando o yarn, execute:
+    ```bash
+    yarn list --depth=0
