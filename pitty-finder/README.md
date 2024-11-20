@@ -15,7 +15,19 @@ Pitty Finder é um projeto de front-end para uma página de adoção de animais 
    git clone https://github.com/LeonardoCaml/Pitty-Finder.git
 
 2. Instale as dependências:
-   ```npm install
+   ```bash
+   npm install
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. Inicie o projeto:
+   ```bash
+   npm run dev
+
+# Estrutura do projeto
+
+- `src/:` Código fonte do projeto
+- `routes/:` Contém as rotas principais do projeto (home, search pages, current pages e etc.)
+- `assets/:` Contém todas as fotos e arquivos de mídia do projeto
+- `public/:` Arquivos estáticos
+- `databases/:` Base de dados utilizados para simular um banco de dados
+- `constants/:` Icones, fotos e outros elementos em forma de variável exportável 
+- `components/:` Carrega todos os componentes do site em diferentes escalas
