@@ -12,7 +12,6 @@ import AnimalPage from "./routes/Animais/AnimalPage.jsx";
 import AnimalCurrent from "./routes/AnimalCurrent/AnimalCurrent.jsx";
 import Abrigos from "./routes/Abrigos/AbrigoPage.jsx";
 import AbrigoCurrent from "./routes/AbrigoCurrent/AbrigoCurrent.jsx";
-import PerfilPage from "./routes/Perfil/PerfilPage.jsx";
 
 function App() {
   const theme = createTheme({
@@ -39,7 +38,6 @@ function App() {
           <Route path="/adote/:id" element={<AnimalCurrent />} />
           <Route path="/abrigo/" element={<Abrigos />} />
           <Route path="/abrigo/:id" element={<AbrigoCurrent />} />
-          <Route path="/perfil" element={<PerfilPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
