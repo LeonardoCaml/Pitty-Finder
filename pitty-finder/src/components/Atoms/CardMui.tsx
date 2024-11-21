@@ -15,12 +15,7 @@ export interface CardMuiProps {
   onClick: () => void;
 }
 
-const CardMui = ({
-  image,
-  title,
-  description,
-  onClick,
-}: CardMuiProps) => {
+const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {

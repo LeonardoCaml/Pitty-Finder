@@ -1,3 +1,4 @@
+import "@testing-library/jest-dom";
 import { afterEach } from "vitest";
 import { cleanup } from "@testing-library/jest-dom/react";
 import "@testing-library/jest-dom/vitest";
