@@ -1,7 +1,7 @@
-import logo from "../src/assets/photos/logo.png"
-import account from "../src/assets/photos/account_circle.png"
+import logo from "../assets/photos/logo";
+import account from "../assets/photos/account";
 
 export default {
-    logo,
-    account
-}
+  logo,
+  account,
+};

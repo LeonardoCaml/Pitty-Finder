@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import animals from "../../../databases/adopt.js";
-import abrigo from "../../../databases/abrigos.js";
-import Header from "../../../components/Molecules/Header.jsx";
-import Footer from "../../../components/Molecules/Footer.jsx";
-import ButtonMui from "../../../components/Atoms/ButtonMui";
+import animals from "../../databases/adopt";
+import abrigo from "../../databases/abrigos";
+import Header from "../../components/Molecules/Header.jsx";
+import Footer from "../../components/Molecules/Footer.jsx";
+import ButtonMui from "../../components/Atoms/ButtonMui";
 import {
   Box,
   Container,
@@ -13,7 +13,7 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import BulletCard from "../../../components/Atoms/bulletMUI.tsx";
+import BulletCard from "../../components/Atoms/bulletMUI.tsx";
 
 export default function AnimalCurrent() {
   const { id } = useParams();

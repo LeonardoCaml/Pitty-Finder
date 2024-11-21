@@ -15,7 +15,7 @@ export interface CardMuiProps {
   onClick: () => void;
 }
 
-export const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
+const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -54,8 +54,8 @@ export const CardMui = ({ image, title, description, onClick }: CardMuiProps) =>
             width={170}
             height={150}
           />
-          <Skeleton variant="text" animation="wave" width={170} height={40} />
-          <Skeleton variant="text" animation="wave" width={170} height={40} />
+          <Skeleton variant="text" animation="wave" width={170} height={30} />
+          <Skeleton variant="text" animation="wave" width={170} height={30} />
         </CardContent>
       ) : (
         <CardContent
@@ -104,3 +104,5 @@ export const CardMui = ({ image, title, description, onClick }: CardMuiProps) =>
     </Card>
   );
 };
+
+export default CardMui;

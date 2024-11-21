@@ -1,14 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import abrigo from "../../../databases/abrigos";
+import abrigo from "../../databases/abrigos";
 
-import Footer from "../../../components/Molecules/Footer";
-import Header from "../../../components/Molecules/Header";
+import Footer from "../../components/Molecules/Footer";
+import Header from "../../components/Molecules/Header";
 import { Container, Stack, Typography } from "@mui/material";
 
-import ContactAbrigo from "../../../components/Organims/ContactAbrigo";
-import PaginatedCard from "../../../components/Organims/PaginatedCard.jsx";
+import ContactAbrigo from "../../components/Organims/ContactAbrigo";
+import PaginatedCard from "../../components/Organims/PaginatedCard.jsx";
 
 export default function Abrigo() {
   const { id } = useParams();
