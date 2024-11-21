@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import CardMui from "../Atoms/CardMUI.tsx";
-import abrigo from "../../databases/abrigos.js";
+import CardMui from "../Atoms/CardMui";
+import abrigo from "../../databases/abrigos";
 
 export default function FilterResultAnimal() {
   const navigate = useNavigate();

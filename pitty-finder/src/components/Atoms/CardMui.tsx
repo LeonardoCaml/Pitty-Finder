@@ -8,19 +8,14 @@ import {
 
 import { useState, useEffect } from "react";
 
-interface CardMuiProps {
+export interface CardMuiProps {
   image: string;
   title: string;
   description: string;
   onClick: () => void;
 }
 
-export default function CardMui({
-  image,
-  title,
-  description,
-  onClick,
-}: CardMuiProps) {
+export const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
@@ -108,4 +103,4 @@ export default function CardMui({
       )}
     </Card>
   );
-}
+};
