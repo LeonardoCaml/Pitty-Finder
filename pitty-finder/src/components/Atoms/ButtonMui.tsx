@@ -1,6 +1,6 @@
 import { Button } from "@mui/material";
 
-interface ButtonMuiProps {
+export interface ButtonMuiProps {
   tittle: string,
   customStyle?: React.CSSProperties,
   onClick: () => void,
