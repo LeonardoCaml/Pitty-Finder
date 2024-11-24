@@ -1,6 +1,6 @@
 import { Box, Container, Divider, Stack, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import CardMui from "../Atoms/CardMUI.tsx";
+import CardMui from "../Atoms/CardMui";
 import animals from "../../databases/adopt.js";
 
 export default function FilterResultAnimal() {
