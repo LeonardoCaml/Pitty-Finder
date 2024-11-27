@@ -1,6 +1,26 @@
 import foto from "../constants/photos.js";
 
-const animals = [
+interface Ficha {
+  raca: string;
+  idade: string;
+  sexo: string;
+  castrado: string;
+  tempoDeAbrigo: string;
+  tamanho?: string; 
+}
+
+interface Animal {
+  id: number;
+  foto: string;
+  nome: string;
+  estado: string;
+  cidade: string;
+  especie?: string;
+  descricao: string;
+  ficha: Ficha;
+}
+
+export const animals: Array<Animal> = [
   {
     id: 1,
     foto: foto.rex,
@@ -162,6 +182,3 @@ const animals = [
     }
   }
 ];
-
-
-export default animals

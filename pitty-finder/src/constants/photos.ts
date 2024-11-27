@@ -1,11 +1,3 @@
-// slides
-import slide1 from "../assets/photos/1.jpg";
-import slide2 from "../assets/photos/2.jpg";
-import slide3 from "../assets/photos/3.jpg";
-import slide4 from "../assets/photos/4.jpg";
-import slide5 from "../assets/photos/5.png";
-
-// card
 import abrigo from "../assets/photos/Abrigos.png";
 import cachorro from "../assets/photos/cachorro.png";
 import gato from "../assets/photos/gato.png";
@@ -49,12 +41,7 @@ import data from "../assets/photos/data.png";
 import pet from "../assets/photos/pet.png";
 import saude from "../assets/photos/saude.png";
 
-export default {
-  slide1,
-  slide2,
-  slide3,
-  slide4,
-  slide5,
+const assets = {
   abrigo,
   logo,
   account,
@@ -84,3 +71,5 @@ export default {
   casa_dos_bichos,
   satuario_pet,
 };
+
+export default assets;
