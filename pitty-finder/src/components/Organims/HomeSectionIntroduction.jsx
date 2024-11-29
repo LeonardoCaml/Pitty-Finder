@@ -1,5 +1,5 @@
 import { Container, Stack, Typography, Box } from "@mui/material";
-import foto from "../../constants/photos.js";
+import foto from "../../constants/photos";
 
 export default function HomeSectionOne() {
   return (

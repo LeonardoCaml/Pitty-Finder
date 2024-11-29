@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import animals from "../../databases/adopt";
-import abrigo from "../../databases/abrigos";
+import { animals } from "../../databases/adopt";
+import abrigos from "../../databases/abrigos";
 import Header from "../../components/Molecules/Header.jsx";
 import Footer from "../../components/Molecules/Footer.jsx";
 import ButtonMui from "../../components/Atoms/ButtonMui";
@@ -96,8 +96,14 @@ export default function AnimalCurrent() {
                 </Typography>
               </Stack>
               <Stack spacing={2} alignItems={{ xs: "center", sm: "start" }}>
-                <ButtonMui tittle="adotar" customStyle={{ width: {xs: 250, sm: 200} }} />
-                <ButtonMui tittle="salvar" customStyle={{ width: {xs: 250, sm: 200} }} />
+                <ButtonMui
+                  tittle="adotar"
+                  customStyle={{ width: { xs: 250, sm: 200 } }}
+                />
+                <ButtonMui
+                  tittle="salvar"
+                  customStyle={{ width: { xs: 250, sm: 200 } }}
+                />
               </Stack>
             </Stack>
             <Stack spacing={4}>
@@ -234,7 +240,7 @@ export default function AnimalCurrent() {
                     >
                       <img
                         alt="abrigo"
-                        src={abrigo[0].foto}
+                        src={abrigos[0].foto}
                         style={{
                           width: 130,
                           height: 130,
@@ -243,7 +249,7 @@ export default function AnimalCurrent() {
                         }}
                       />
                       <Typography variant="h6" fontWeight={700}>
-                        {abrigo[0].nome}
+                        {abrigos[0].nome}
                       </Typography>
                     </Stack>
                   </ListItem>

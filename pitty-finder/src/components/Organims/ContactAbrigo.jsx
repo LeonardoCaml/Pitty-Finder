@@ -1,7 +1,7 @@
 import ButtonMui from "../../components/Atoms/ButtonMui";
 import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
 
-import abrigo from "../../databases/abrigos";
+import abrigos from "../../databases/abrigos";
 
 import foto from "../../constants/photos";
 import { useParams } from "react-router-dom";
@@ -13,7 +13,7 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 
 export default function ContactAbrigo() {
   const { id } = useParams();
-  const card = abrigo.find((item) => item.id === parseInt(id, 10));
+  const card = abrigos.find((item) => item.id === parseInt(id, 10));
 
   return (
     <Stack

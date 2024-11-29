@@ -1,5 +1,5 @@
-import animais from "../../databases/adopt.js";
-import CardMui from "../Atoms/CardMUI.tsx";
+import { animals } from "../../databases/adopt";
+import CardMui from "../Atoms/CardMui";
 import { Box, Grid2, Pagination, Stack, Typography } from "@mui/material";
 import { useState } from "react";
 
@@ -9,7 +9,7 @@ export default function PaginatedCard() {
 
   const startIndex = (page - 1) * cardsPerPage;
   const endIndex = startIndex + cardsPerPage;
-  const currentCards = animais.slice(startIndex, endIndex);
+  const currentCards = animals.slice(startIndex, endIndex);
 
   const handleChange = (event, value) => {
     setPage(value);
@@ -31,9 +31,9 @@ export default function PaginatedCard() {
                 sm: 3,
               }}
               sx={{ scale: 0.8, alignItems: "center" }}
+              key={card.id}
             >
               <CardMui
-                key={card.id}
                 onClick={() => handleCardClick(card.id)}
                 image={card.foto}
                 title={card.nome}
@@ -44,7 +44,7 @@ export default function PaginatedCard() {
         </Grid2>
       </Box>
       <Pagination
-        count={Math.ceil(animais.length / cardsPerPage)}
+        count={Math.ceil(animals.length / cardsPerPage)}
         page={page}
         onChange={handleChange}
         color="primary"

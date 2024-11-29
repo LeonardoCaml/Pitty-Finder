@@ -1,4 +1,4 @@
-import foto from "../../constants/photos.js";
+import foto from "../../constants/photos.ts";
 import {
   Avatar,
   Box,

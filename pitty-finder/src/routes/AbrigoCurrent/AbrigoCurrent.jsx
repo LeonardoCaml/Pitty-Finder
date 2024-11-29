@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import abrigo from "../../databases/abrigos";
+import abrigos from "../../databases/abrigos";
 
 import Footer from "../../components/Molecules/Footer";
 import Header from "../../components/Molecules/Header";
@@ -12,7 +12,7 @@ import PaginatedCard from "../../components/Organims/PaginatedCard.jsx";
 
 export default function Abrigo() {
   const { id } = useParams();
-  const card = abrigo.find((item) => item.id === parseInt(id, 10));
+  const card = abrigos.find((item) => item.id === parseInt(id, 10));
 
   if (!card) {
     return <p>Not found here {card}</p>;

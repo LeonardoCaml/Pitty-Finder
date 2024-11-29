@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import abrigos from "../../databases/abrigos.js";
-import CardMui from "../Atoms/CardMUI.tsx";
+import abrigos from "../../databases/abrigos";
+import CardMui from "../Atoms/CardMui";
 import ButtonMui from "../Atoms/ButtonMui";
 import { Box, Container, Stack, Typography } from "@mui/material";
 

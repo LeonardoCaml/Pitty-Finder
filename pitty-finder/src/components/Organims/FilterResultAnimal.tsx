@@ -29,7 +29,7 @@ export default function FilterResultAnimal() {
           {animals.map((card) => (
             <CardMui
               key={card.id}
-              onClick={() => handleCardClick(typeof card.id)}
+              onClick={() => handleCardClick(card.id.toString())}
               image={card.foto}
               title={card.nome}
               description={card.cidade + " / " + card.estado}
