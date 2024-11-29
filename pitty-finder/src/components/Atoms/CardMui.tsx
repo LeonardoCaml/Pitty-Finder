@@ -20,7 +20,7 @@ const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 2500));
+      await new Promise((resolve) => setTimeout(resolve, 5000));
       setIsLoading(false);
     };
     fetchData();
