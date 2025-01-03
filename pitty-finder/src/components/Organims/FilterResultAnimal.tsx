@@ -1,10 +1,10 @@
-import { Box, Container, Divider, Stack, Typography } from "@mui/material";
+import { Container, Divider, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import CardMui from "../Atoms/CardMui";
 import { animals } from "../../databases/adopt";
+// import { lazy, Suspense } from "react";
 
 export default function FilterResultAnimal() {
-
   const navigate = useNavigate();
 
   const handleCardClick = (id: string) => {
@@ -17,15 +17,7 @@ export default function FilterResultAnimal() {
         Resultados
       </Typography>
       <Divider sx={{ borderColor: "black", borderWidth: 3, my: 2 }} />
-      <Stack sx={{ my: 5 }}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: { xs: 2, sm: 4 },
-          }}
-        >
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 mb-10">
           {animals.map((card) => (
             <CardMui
               key={card.id}
@@ -35,8 +27,7 @@ export default function FilterResultAnimal() {
               description={card.cidade + " / " + card.estado}
             />
           ))}
-        </Box>
-      </Stack>
+        </div>
     </Container>
   );
 }
