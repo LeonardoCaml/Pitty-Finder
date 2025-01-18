@@ -1,7 +1,3 @@
-import { Skeleton } from "@mui/material";
-
-import { useState, useEffect } from "react";
-
 export interface CardMuiProps {
   image: string;
   title: string;
@@ -10,49 +6,26 @@ export interface CardMuiProps {
 }
 
 const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
-      setIsLoading(false);
-    };
-    fetchData();
-  }, []);
-
   return (
     <div
-      className="w-60 flex flex-col items-center p-5 border-2 rounded-xl hover:-translate-y-2 border-black"
+      className="transition duration-150 w-48 my-5 flex flex-col items-center hover:scale-105"
       onClick={onClick}
     >
-      {isLoading ? (
-        <div className="flex flex-col items-center justify-center">
-          <Skeleton
-            variant="rounded"
-            animation="wave"
-            width={170}
-            height={150}
+      <div className="w-40 flex flex-col items-center">
+        <div className="h-40 w-full overflow-hidden rounded-full mb-2">
+          <img
+            src={image}
+            alt="foto do animal"
+            className="w-full h-full object-cover"
           />
-          <Skeleton variant="text" animation="wave" width={170} height={30} />
-          <Skeleton variant="text" animation="wave" width={170} height={30} />
         </div>
-      ) : (
-        <div className="w-48">
-          <div className="h-[150px] w-48 overflow-hidden rounded-xl border-3 border-black">
-            <img
-              src={image}
-              alt="foto do animal"
-              className="w-full h-full object-cover"
-            />
-          </div>
-          <h1 className="font-bold text-xl overflow-hidden text-ellipsis my-2">
-            {title}
-          </h1>
-          <p className="text-gray-500 overflow-hidden text-ellipsis my-2">
-            {description}
-          </p>
-        </div>
-      )}
+        <h1 className="text-center font-bold text-md overflow-hidden text-ellipsis">
+          {title}
+        </h1>
+        <p className="text-center text-sm text-gray-500 overflow-hidden text-ellipsis">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
