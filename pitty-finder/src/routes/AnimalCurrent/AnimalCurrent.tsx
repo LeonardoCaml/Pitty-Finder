@@ -2,8 +2,8 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { animals } from "../../databases/adopt";
 import abrigos from "../../databases/abrigos";
-import Header from "../../components/Molecules/Header.jsx";
-import Footer from "../../components/Molecules/Footer.jsx";
+import Header from "../../components/Molecules/Header";
+import Footer from "../../components/Molecules/Footer";
 import ButtonMui from "../../components/Atoms/ButtonMui";
 import {
   Box,
@@ -13,11 +13,16 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import BulletCard from "../../components/Atoms/bulletMUI.tsx";
+import BulletCard from "../../components/Atoms/bulletMUI";
 
 export default function AnimalCurrent() {
-  const { id } = useParams();
-  const card = animals.find((item) => item.id === parseInt(id, 10));
+  const { id } = useParams<{ id: string }>();
+
+  if (!id) {
+    return <p>Not found here</p>;
+  }
+
+  const card = animals.find((item: { id: number }) => item.id === parseInt(id, 10));
 
   if (!card) {
     return <p>Not found here</p>;
@@ -98,11 +103,11 @@ export default function AnimalCurrent() {
               <Stack spacing={2} alignItems={{ xs: "center", sm: "start" }}>
                 <ButtonMui
                   tittle="adotar"
-                  customStyle={{ width: { xs: 250, sm: 200 } }}
+                  onClick={() => console.log("adotar")}
                 />
                 <ButtonMui
                   tittle="salvar"
-                  customStyle={{ width: { xs: 250, sm: 200 } }}
+                  onClick={() => console.log("salvar")}
                 />
               </Stack>
             </Stack>

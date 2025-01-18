@@ -1,17 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import abrigos from "../../databases/abrigos";
+import abrigos from "../../databases/abrigos.js";
 
 import Footer from "../../components/Molecules/Footer";
 import Header from "../../components/Molecules/Header";
 import { Container, Stack, Typography } from "@mui/material";
 
 import ContactAbrigo from "../../components/Organims/ContactAbrigo";
-import PaginatedCard from "../../components/Organims/PaginatedCard.jsx";
+import PaginatedCard from "../../components/Organims/PaginatedCard";
 
 export default function Abrigo() {
-  const { id } = useParams();
+  const { id } = useParams<{ id: string }>();
+
+  if (!id) {
+    return <p>Not found here</p>;
+  }
+
   const card = abrigos.find((item) => item.id === parseInt(id, 10));
 
   if (!card) {

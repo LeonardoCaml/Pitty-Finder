@@ -3,16 +3,12 @@ import foto from "../../constants/photos";
 
 export default function HomeSectionOne() {
   return (
-    <Stack
-      direction={{ lg: "row", xs: "column" }}
-      alignItems="center"
-      justifyContent="space-between"
-    >
-      <div>
-        <h1>
-          Encontre seu melhor amigo no PittyFinder
+    <div className="flex items-center my-4">
+      <div className="flex flex-col gap-2">
+        <h1 className="text-3xl font-bold">
+          Encontre seu melhor amigo com PittyFinder
         </h1>
-        <p>
+        <p className="text-md">
           No PittyFinder, acreditamos que todo animal merece um lar cheio de
           amor e carinho. Somos uma plataforma dedicada a conectar pessoas que
           querem adotar animais resgatados aos abrigos e ONGs de sua região.
@@ -31,6 +27,6 @@ export default function HomeSectionOne() {
         </p>
       </div>
       <img src={foto.HomeSection} alt="animal" width={350} />
-    </Stack>
+    </div>
   );
 }

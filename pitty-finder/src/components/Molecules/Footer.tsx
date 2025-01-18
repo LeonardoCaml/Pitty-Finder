@@ -1,4 +1,4 @@
-import foto from "../../constants/photos.ts";
+import foto from "../../constants/photos.js";
 import { Box, Container, Stack, Typography, Skeleton } from "@mui/material";
 
 export default function Footer() {
