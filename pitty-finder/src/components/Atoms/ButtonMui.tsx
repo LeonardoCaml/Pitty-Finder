@@ -2,11 +2,10 @@ import { Button } from "@mui/material";
 
 export interface ButtonMuiProps {
   tittle: string,
-  customStyle?: React.CSSProperties,
   onClick: () => void,
 }
 
-export default function ButtonMui({ tittle, onClick, customStyle }: ButtonMuiProps) {
+export default function ButtonMui({ tittle, onClick }: ButtonMuiProps) {
   return (
     <Button
       variant="outlined"
@@ -46,7 +45,6 @@ export default function ButtonMui({ tittle, onClick, customStyle }: ButtonMuiPro
           color: "black",
           backgroundColor: "black",
         },
-        ...(customStyle ? customStyle : {}),
       }}
     >
       {tittle}
