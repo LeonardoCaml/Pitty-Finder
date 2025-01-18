@@ -1,4 +1,4 @@
-import { Stack } from "@mui/material";
+import { Container, Stack } from "@mui/material";
 
 import Header from "../../components/Molecules/Header";
 import HomeSectionIntroduction from "../../components/Organims/HomeSectionIntroduction.jsx";
@@ -9,10 +9,12 @@ import Footer from "../../components/Molecules/Footer.jsx";
 export default function HomePage() {
   return (
     <Stack>
-      <Header />
-      <HomeSectionIntroduction />
-      <HomeSectionAnimal />
-      <HomeSectionAbrigo />
+      <Container maxWidth="md">
+        <Header />
+        <HomeSectionIntroduction />
+        <HomeSectionAnimal />
+        <HomeSectionAbrigo />
+      </Container>
       <Footer />
     </Stack>
   );

@@ -22,7 +22,7 @@ const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
 
   return (
     <div
-      className="w-60 flex flex-col items-center p-5 border-3 hover:-translate-y-2 border-black"
+      className="w-60 flex flex-col items-center p-5 border-2 rounded-xl hover:-translate-y-2 border-black"
       onClick={onClick}
     >
       {isLoading ? (

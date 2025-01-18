@@ -1,97 +1,62 @@
+import React, { useState } from "react";
 import foto from "../../constants/photos.ts";
-import {
-  Avatar,
-  Box,
-  Container,
-  Divider,
-  Stack,
-  Typography,
-} from "@mui/material";
+import styled from "styled-components";
+
+const HeaderSection = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+`
+
+const HeaderLogo = styled.img`
+  width: 250px;
+`
+
+const PerfilIcon = styled(HeaderLogo)`
+  width: 40px;
+  cursor: pointer;
+`
+
+const HeaderDivSeparate = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 15px;
+`
+
+const Divider = styled.div`
+  height: 20px;
+  width: 1px;
+  background-color: #777;
+`
 
 export default function Header() {
+
+  const [logged, isLogged] = useState(false);
+
   return (
-    <Container
-      sx={{
-        maxWidth: {
-          xs: "450px",
-          sm: "700px",
-          lg: "1200px",
-        },
-      }}
-    >
-      <Stack
-        direction="row"
-        justifyContent="space-between"
-        alignItems="center"
-        height={80}
-        marginY={2}
-      >
-        <Box
-          component="img"
-          src={foto.logo}
-          alt="logo-pitty-finder"
-          sx={{
-            width: {
-              xs: 150,
-              md: 250,
-            },
-          }}
-        />
-        <Stack direction="row" alignItems="center" spacing={2}>
-          <Stack
-            direction="row"
-            alignItems="center"
-            spacing={2}
-            divider={
-              <Divider orientation="vertical" variant="middle" flexItem />
-            }
-            sx={{
-              fontSize: {
-                xs: "0.3rem",
-                md: "1rem",
-              },
-            }}
-          >
-            <Typography
-              variant="body1"
-              fontWeight="500"
-              sx={{
-                cursor: "pointer",
-                fontSize: {
-                  xs: ".8rem",
-                  md: "1rem",
-                },
-              }}
-            >
-              Entrar
-            </Typography>
-            <Typography
-              variant="body1"
-              fontWeight="500"
-              sx={{
-                cursor: "pointer",
-                fontSize: {
-                  xs: ".8rem",
-                  md: "1rem",
-                },
-              }}
-            >
-              Criar Conta
-            </Typography>
-          </Stack>
-          <Avatar
-            alt="personal-icon"
-            src={foto.account}
-            width={40}
-            sx={{
-              display: {
-                md: "block",
-                xs: "none",
-              },
-            }}
-          />
-        </Stack>
-      </Stack>
-    </Container>
+    <HeaderSection>
+      <HeaderLogo src={foto.logo} alt="logo-pitty-finder.jpg" />
+
+      {logged ? (
+        <HeaderDivSeparate>
+          <div style={{ display: "flex", flexDirection: 'column', alignItems: 'end' }}>
+            <h1 style={{ fontSize: '14px', fontWeight: 'bold' }}>Leonardo Camelo</h1>
+            <p style={{ fontSize: '12px' }}>perfil</p>
+          </div>
+          <PerfilIcon src={foto.account} alt="perfil" />
+        </HeaderDivSeparate>
+      ) : (
+        <HeaderDivSeparate>
+          <HeaderDivSeparate>
+            <h1 style={{ fontWeight: 'bold' }}>Entrar</h1>
+            <Divider />
+            <h1 style={{ fontWeight: 'bold' }}>Criar Conta</h1>
+          </HeaderDivSeparate>
+          <PerfilIcon src={foto.account} alt="perfil" />
+        </HeaderDivSeparate>
+      )}
+
+    </HeaderSection>
   );
 }
