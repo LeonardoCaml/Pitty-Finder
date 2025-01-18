@@ -7,11 +7,11 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 
 // pages
-import HomePage from "./routes/home/HomePage.jsx";
-import AnimalPage from "./routes/Animais/AnimalPage.jsx";
-import AnimalCurrent from "./routes/AnimalCurrent/AnimalCurrent.jsx";
-import Abrigos from "./routes/Abrigos/AbrigoPage.jsx";
-import AbrigoCurrent from "./routes/AbrigoCurrent/AbrigoCurrent.jsx";
+import HomePage from "./routes/home/HomePage";
+import AnimalPage from "./routes/Animais/AnimalPage";
+import AnimalCurrent from "./routes/AnimalCurrent/AnimalCurrent";
+import Abrigos from "./routes/Abrigos/AbrigoPage";
+import AbrigoCurrent from "./routes/AbrigoCurrent/AbrigoCurrent";
 
 function App() {
   const theme = createTheme({
