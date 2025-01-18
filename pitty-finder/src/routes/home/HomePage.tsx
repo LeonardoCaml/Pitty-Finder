@@ -13,7 +13,7 @@ export default function HomePage() {
         <Header />
         <HomeSectionIntroduction />
         <HomeSectionAnimal />
-        <HomeSectionAbrigo />
+        <HomeSectionAbrigo/>
       </Container>
       <Footer />
     </Stack>
