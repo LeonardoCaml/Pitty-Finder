@@ -8,7 +8,7 @@ export interface CardMuiProps {
 const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
   return (
     <div
-      className="transition duration-150 w-48 my-5 flex flex-col items-center hover:scale-105"
+      className="w-48 my-5 flex flex-col items-center hover-animation"
       onClick={onClick}
     >
       <div className="w-40 flex flex-col items-center">
@@ -19,10 +19,10 @@ const CardMui = ({ image, title, description, onClick }: CardMuiProps) => {
             className="w-full h-full object-cover"
           />
         </div>
-        <h1 className="text-center font-bold text-md overflow-hidden text-ellipsis">
+        <h1 className="text-center font-bold text-md text-ecl">
           {title}
         </h1>
-        <p className="text-center text-sm text-gray-500 overflow-hidden text-ellipsis">
+        <p className="text-center text-sm text-gray-500 text-ellipsis">
           {description}
         </p>
       </div>

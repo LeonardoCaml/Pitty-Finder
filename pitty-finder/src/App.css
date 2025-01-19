@@ -8,3 +8,27 @@
   padding: 0;
   text-decoration: none;
 }
+
+.hover-animation {
+  @apply hover:scale-105 transition duration-150;
+}
+
+.text-ellipsis {
+  @aplly overflow-hidden text-ellipsis;
+}
+
+.button {
+  @apply opacity-100 transition duration-300 border-2 border-black p-4 rounded-lg min-w-36 w-full text-start text-sm font-bold uppercase;
+}
+
+.button:hover {
+  @apply scale-110;
+}
+
+.button:active {
+  @apply scale-100 bg-black text-white;
+}
+
+.filter-responsive {
+  @apply md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-4 sm:grid-cols-2;
+}
