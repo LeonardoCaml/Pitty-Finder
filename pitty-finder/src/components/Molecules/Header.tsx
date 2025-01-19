@@ -1,19 +1,5 @@
 import React, { useState } from "react";
 import foto from "../../constants/photos.js";
-import styled from "styled-components";
-
-const HeaderSection = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px;
-`
-
-const Divider = styled.div`
-  height: 20px;
-  width: 1px;
-  background-color: #777;
-`
 
 export default function Header() {
 
@@ -32,9 +18,9 @@ export default function Header() {
         </div>
       ) : (
         <div className="flex gap-2 items-center">
-          <div className="flex gap-2">
+          <div className="flex gap-2 items-center">
             <h1 className="text-sm font-bold cursor-pointer">Entrar</h1>
-            <Divider />
+            <div className="w-px h-4 bg-gray-400" />
             <h1 className="text-sm font-bold cursor-pointer">Criar Conta</h1>
           </div>
           <img src={foto.account} alt="perfil" width={35} />
