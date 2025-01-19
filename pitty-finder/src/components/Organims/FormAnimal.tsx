@@ -4,25 +4,19 @@ import ButtonMui from "../Atoms/ButtonMui";
 
 export default function FormAnimal() {
   return (
-    <Container>
-      <Typography variant="h3" fontSize="2rem" fontWeight={700} sx={{ my: 2 }}>
+    <div>
+      <h1 className="font-bold text-3xl my-4">
         filtro
-      </Typography>
-      <Stack
-        direction={{ xs: "column", sm: "row" }}
-        justifyContent="space-between"
-        gap={2}
-      >
+      </h1>
+      <div className="w-full grid grid-cols-4 gap-4 items-center">
         <FormSelectMui formLabel="animal" />
         <FormSelectMui formLabel="estado" />
         <FormSelectMui formLabel="cidade" />
         <ButtonMui
           tittle="buscar"
-          customStyle={{
-            width: { xs: "100%", sm: 200 },
-          }}
+          onClick={() => console.log("teste")}
         />
-      </Stack>
-    </Container>
+      </div>
+    </div>
   );
 }
