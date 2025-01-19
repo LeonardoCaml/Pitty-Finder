@@ -1,10 +1,14 @@
 import { Box, InputLabel, MenuItem, Select } from "@mui/material";
 import FormControl from "@mui/material/FormControl";
 
-export default function FormSelectMui({ formLabel }) {
+type FormSelectMuiProps = {
+  formLabel: string;
+};
+
+export default function FormSelectMui({ formLabel }: FormSelectMuiProps) {
   return (
-    <Box>
-      <FormControl sx={{ minWidth: 250, width: {xs: '100%', sm: 270} }}>
+    <div>
+      <FormControl className="w-full">
         <InputLabel
           sx={{
             color: "gray",
@@ -20,12 +24,12 @@ export default function FormSelectMui({ formLabel }) {
           label={formLabel}
           sx={{
             height: 50,
-            borderRadius: 3,
+            borderRadius: 2,
             "& .MuiOutlinedInput-notchedOutline": {
-              border: 3,
+              border: 2,
             },
             "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-              border: 3,
+              border: 2,
             },
           }}
         >
@@ -37,6 +41,6 @@ export default function FormSelectMui({ formLabel }) {
           <MenuItem value="3">escolha...</MenuItem>
         </Select>
       </FormControl>
-    </Box>
+    </div>
   );
 }
