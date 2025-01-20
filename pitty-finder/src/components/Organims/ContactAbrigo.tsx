@@ -13,93 +13,53 @@ import ContactPageIcon from "@mui/icons-material/ContactPage";
 
 export default function ContactAbrigo() {
   const { id } = useParams();
+
+  if (!id) {
+    return <p>Not found here</p>;
+  }
+
   const card = abrigos.find((item) => item.id === parseInt(id, 10));
 
+  if (!card) {
+    return <p>Not found here</p>;
+  }
+
   return (
-    <Stack
-      spacing={2}
-      sx={{
-        width: 300,
-        height: 400,
-        alignItems: "center",
-        justifyContent: "center",
-        my: 3,
-        p: 2
-      }}
-    >
-      <Stack spacing={2} sx={{ width: "100%" }}>
-        <Stack direction="row" alignItems="center" px={2} gap={1}>
+    <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4">
+        <div className="flex items-center">
           <FmdGoodIcon />
-          <Typography variant="p" fontWeight={700}>
-            local: {card.ficha.local.bairro + ", " + card.ficha.local.rua}
-          </Typography>
-        </Stack>
-        <Stack direction="row" alignItems="center" px={2} gap={1}>
+          <h1 className="font-bold text-sm">local: {card.ficha.local.bairro + ", " + card.ficha.local.rua}</h1>
+        </div>
+        <div className="flex items-center">
           <FoundationIcon />
-          <Typography variant="p" fontWeight={700}>
-            data de fundação: {card.ficha.dataDeFundacao}
-          </Typography>
-        </Stack>
-        <Stack direction="row" alignItems="center" px={2} gap={1}>
+          <h1 className="font-bold text-sm">data de fundação: {card.ficha.dataDeFundacao}</h1>
+        </div>
+        <div className="flex items-center">
           <ContactPageIcon />
-          <Typography variant="p" fontWeight={700}>
-            contatos:
-          </Typography>
-        </Stack>
-      </Stack>
-      <Stack sx={{ width: "100%" }}>
-        <List
-          sx={{
-            width: "100%",
-            borderRadius: 2,
-            border: 2,
-            borderColor: "divider",
-          }}
-        >
-          <ListItem>
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <img src={foto.facebook} width={18} />
-              <Typography variant="p" fontWeight={700}>
-                {card.ficha.meiosDeContato.facebook}
-              </Typography>
-            </Stack>
-          </ListItem>
-          <Divider variant="middle" />
-          <ListItem>
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <img src={foto.instagram} width={18} />
-              <Typography variant="p" fontWeight={700}>
-                {card.ficha.meiosDeContato.instagram}
-              </Typography>
-            </Stack>
-          </ListItem>
-          <Divider variant="middle" />
-          <ListItem>
-            <Stack direction="row" alignItems="center" spacing={1}>
-              <img src={foto.email} width={18} />
-              <Typography variant="p" fontWeight={700}>
-                {card.ficha.meiosDeContato.email}
-              </Typography>
-            </Stack>
-          </ListItem>
-        </List>
-      </Stack>
-      <Stack sx={{ width: "100%" }}>
-        <Stack spacing={2}>
-          <ButtonMui
-            tittle="agendar visita"
-            customStyle={{
-              width: "100%",
-            }}
-          />
-          <ButtonMui
-            tittle="ajudar o abrigo"
-            customStyle={{
-              width: "100%",
-            }}
-          />
-        </Stack>
-      </Stack>
-    </Stack>
+          <h1 className="font-bold text-sm">contatos:</h1>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2">
+        <div className="flex gap-2">
+          <img src={foto.facebook} width={18} />
+          <h1 className="font-bold text-sm">{card.ficha.meiosDeContato.facebook}</h1>
+        </div>
+        <div className="flex gap-2">
+          <img src={foto.instagram} width={18} />
+          <h1 className="font-bold text-sm">{card.ficha.meiosDeContato.instagram}</h1>
+        </div>
+        <div className="flex gap-2">
+          <img src={foto.email} width={18} />
+          <h1 className="font-bold text-sm">{card.ficha.meiosDeContato.email}</h1>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2">
+        <ButtonMui
+          tittle="agendar visita" onClick={() => console.log("agendar visita")} />
+        <ButtonMui
+          tittle="ajudar o abrigo" onClick={() => console.log("ajusar")} />
+      </div>
+    </div>
   );
 }
