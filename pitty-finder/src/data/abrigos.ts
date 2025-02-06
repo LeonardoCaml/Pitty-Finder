@@ -1,6 +1,32 @@
 import foto from "../constants/photos";
 
-const abrigos = [
+interface MeiosDeContato {
+  facebook: string;
+  instagram: string;
+  email: string;
+}
+
+interface Local {
+  bairro: string;
+  rua: string;
+}
+
+interface Ficha {
+  local: Local;
+  dataDeFundacao: string;
+  meiosDeContato: MeiosDeContato;
+}
+
+interface Shelter {
+  id: number;
+  foto: string;
+  nome: string;
+  horarioDeFuncionamento: string;
+  descricao: string;
+  ficha: Ficha;
+}
+
+export const shelters: Array<Shelter> = [
   {
     id: 1,
     foto: foto.abrigo_esperanca,
@@ -15,9 +41,9 @@ const abrigos = [
       },
       dataDeFundacao: "15/03/2005",
       meiosDeContato: {
-        facebook: "facebook.com/abrigoesperanca",
-        instagram: "instagram.com/abrigoesperanca",
-        email: "contato@abrigoesperanca.com",
+        facebook: "facebook",
+        instagram: "instagram",
+        email: "email",
       },
     },
   },
@@ -35,9 +61,9 @@ const abrigos = [
       },
       dataDeFundacao: "22/07/2010",
       meiosDeContato: {
-        facebook: "facebook.com/lardospeludos",
-        instagram: "instagram.com/lardospeludos",
-        email: "contato@lardospeludos.com",
+        facebook: "facebook",
+        instagram: "instagram",
+        email: "email",
       },
     },
   },
@@ -55,9 +81,9 @@ const abrigos = [
       },
       dataDeFundacao: "10/11/2012",
       meiosDeContato: {
-        facebook: "facebook.com/refugioanimal",
-        instagram: "instagram.com/refugioanimal",
-        email: "contato@refugioanimal.com",
+        facebook: "facebook",
+        instagram: "instagram",
+        email: "email",
       },
     },
   },
@@ -75,9 +101,9 @@ const abrigos = [
       },
       dataDeFundacao: "05/05/2008",
       meiosDeContato: {
-        facebook: "facebook.com/casadosbichos",
-        instagram: "instagram.com/casadosbichos",
-        email: "contato@casadosbichos.com",
+        facebook: "facebook",
+        instagram: "instagram",
+        email: "email",
       },
     },
   },
@@ -95,12 +121,10 @@ const abrigos = [
       },
       dataDeFundacao: "12/09/2015",
       meiosDeContato: {
-        facebook: "facebook.com/santuariopet",
-        instagram: "instagram.com/santuariopet",
-        email: "contato@santuariopet.com",
+        facebook: "facebook",
+        instagram: "instagram",
+        email: "email",
       },
     },
   },
 ];
-
-export default abrigos;
