@@ -1,17 +1,14 @@
-import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ScrollTop from "./scrollTop";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
-// css
 import "./App.css";
 
 // pages
-import HomePage from "./routes/home/HomePage";
-import AnimalPage from "./routes/Animais/AnimalPage";
-import AnimalCurrent from "./routes/AnimalCurrent/AnimalCurrent";
-import Abrigos from "./routes/Abrigos/AbrigoPage";
-import AbrigoCurrent from "./routes/AbrigoCurrent/AbrigoCurrent";
+import HomePage from "./pages/Home";
+import Searching from "./pages/Searching";
+import Animal from "./pages/Animal";
+import Shelter from "./pages/Shelter";
 
 function App() {
   const theme = createTheme({
@@ -35,10 +32,10 @@ function App() {
         <ScrollTop />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/adote" element={<AnimalPage />} />
-          <Route path="/adote/:id" element={<AnimalCurrent />} />
-          <Route path="/abrigo/" element={<Abrigos />} />
-          <Route path="/abrigo/:id" element={<AbrigoCurrent />} />
+          <Route path="/animal" element={<Searching />} />
+          <Route path="/shelter" element={<Searching />} />
+          <Route path="/animal/:id" element={<Animal />} />
+          <Route path="/shelter/:id" element={<Shelter />} />
         </Routes>
       </Router>
     </ThemeProvider>

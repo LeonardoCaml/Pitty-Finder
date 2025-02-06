@@ -1,60 +1,40 @@
-import { animals } from "../../databases/adopt";
-import CardMui from "../Atoms/CardMui";
-import { Box, Grid2, Pagination, Stack, Typography } from "@mui/material";
 import { useState } from "react";
+import { animals } from "../../data/adopt";
+import CardMui from "../Atoms/CardMui";
+import Pagination from "../Atoms/Pagination";
 
 export default function PaginatedCard() {
   const [page, setPage] = useState(1);
-  const cardsPerPage = 8;
+  const [postPerPage, setPostPerPage] = useState(4);
 
-  const startIndex = (page - 1) * cardsPerPage;
-  const endIndex = startIndex + cardsPerPage;
-  const currentCards = animals.slice(startIndex, endIndex);
-
-  const handleChange = (event, value) => {
-    setPage(value);
-  };
+  const lastPostIndex = page * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const cardDisplay = animals.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <Stack sx={{ width: "100%", heigth: 400 }} spacing={2}>
-      <Stack alignItems={{ xs: "center", sm: "start" }}>
-        <Typography variant="h5" fontWeight={700} py={2} ml={{ xs: 0, sm: 3 }}>
-          Animais para Adoção no Abrigo
-        </Typography>
-      </Stack>
-      <Box>
-        <Grid2 container>
-          {currentCards.map((card) => (
-            <Grid2
-              size={{
-                xs: 6,
-                sm: 3,
-              }}
-              sx={{ scale: 0.8, alignItems: "center" }}
-              key={card.id}
-            >
+    <div className="basis-3/4 mt-5 mb-10">
+      <h1 className="text-2xl font-bold">
+        Animais para Adoção no Abrigo
+      </h1>
+      <div className="flex flex-col items-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {cardDisplay.map((card) => (
+            <div className="flex scale-90">
               <CardMui
-                onClick={() => handleCardClick(card.id)}
+                onClick={() => console.log(card.id)}
                 image={card.foto}
                 title={card.nome}
                 description={card.cidade + " / " + card.estado}
               />
-            </Grid2>
+            </div>
           ))}
-        </Grid2>
-      </Box>
-      <Pagination
-        count={Math.ceil(animals.length / cardsPerPage)}
-        page={page}
-        onChange={handleChange}
-        color="primary"
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      />
-    </Stack>
+        </div>
+        <Pagination
+          totalPosts={animals.length}
+          postsPerPage={postPerPage}
+          setCurrentPage={setPage}
+          currentPage={page} />
+      </div>
+    </div>
   );
 }
