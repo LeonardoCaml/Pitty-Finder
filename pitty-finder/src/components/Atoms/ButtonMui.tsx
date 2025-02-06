@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 
 export interface ButtonMuiProps {
   tittle: string,
-  onClick: () => void,
+  onClick: () => void | void,
 }
 
 export default function ButtonMui({ tittle, onClick }: ButtonMuiProps) {

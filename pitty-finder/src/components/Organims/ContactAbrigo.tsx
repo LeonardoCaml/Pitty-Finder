@@ -1,8 +1,5 @@
-import ButtonMui from "../../components/Atoms/ButtonMui";
-import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
-
-import abrigos from "../../databases/abrigos";
-
+import ButtonMui from "../Atoms/ButtonMui";
+import {shelters} from "../../data/abrigos";
 import foto from "../../constants/photos";
 import { useParams } from "react-router-dom";
 
@@ -18,7 +15,7 @@ export default function ContactAbrigo() {
     return <p>Not found here</p>;
   }
 
-  const card = abrigos.find((item) => item.id === parseInt(id, 10));
+  const card = shelters.find((item) => item.id === parseInt(id, 10));
 
   if (!card) {
     return <p>Not found here</p>;
