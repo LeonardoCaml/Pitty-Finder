@@ -3,7 +3,7 @@ import { animals } from "../../data/adopt";
 import CardMui from "../Atoms/CardMui";
 import Pagination from "../Atoms/Pagination";
 
-export default function PaginatedCard() {
+export default function AnimalsPerShelter() {
   const [page, setPage] = useState(1);
   const [postPerPage, setPostPerPage] = useState(4);
 

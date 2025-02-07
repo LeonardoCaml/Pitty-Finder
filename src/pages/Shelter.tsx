@@ -1,8 +1,7 @@
 import { useParams } from "react-router-dom";
-import foto from "../constants/photos";
 import { shelters } from "../data/abrigos.js";
 import ButtonMui from "../components/Atoms/ButtonMui";
-import PaginatedCard from "../components/Organims/PaginatedCard";
+import AnimalsPerShelter from "../components/Organims/AnimalsPerShelter";
 
 import Footer from "../components/Layout/Footer";
 import Header from "../components/Layout/Header";
@@ -55,7 +54,7 @@ export default function Shelter() {
                   tittle="ajudar o abrigo" onClick={() => console.log("ajusar")} />
               </div>
             </div>
-            <PaginatedCard />
+            <AnimalsPerShelter />
           </div>
         </Stack>
       </Container>
