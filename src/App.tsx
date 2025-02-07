@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from "@mui/material/styles";
 import "./App.css";
 
 // pages
-import HomePage from "./pages/Home";
+import Home from "./pages/Home/index";
 import Searching from "./pages/Searching";
 import Animal from "./pages/Animal";
 import Shelter from "./pages/Shelter";
@@ -31,7 +31,7 @@ function App() {
       <Router>
         <ScrollTop />
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route path="/" element={<Home />} />
           <Route path="/animal" element={<Searching />} />
           <Route path="/shelter" element={<Searching />} />
           <Route path="/animal/:id" element={<Animal />} />

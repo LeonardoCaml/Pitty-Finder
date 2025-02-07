@@ -33,6 +33,10 @@
   @apply md:grid-cols-3 md:gap-2 lg:grid-cols-4 lg:gap-4 sm:grid-cols-2;
 }
 
-.container {
-  @apply lg:
+.item-center-absolute {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 outline-none;
 }
+
+/* .container {
+  @apply lg:
+} */
