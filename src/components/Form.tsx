@@ -1,5 +1,5 @@
-import FormSelectMui from "../Atoms/Form";
-import ButtonMui from "../Atoms/ButtonMui";
+import FormSelectMui from "@components/FormControler";
+import ButtonMui from "@components/ButtonMui";
 
 interface Props {
     firstLabel: string;

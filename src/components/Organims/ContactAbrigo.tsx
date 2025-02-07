@@ -1,6 +1,6 @@
-import ButtonMui from "../Atoms/ButtonMui";
-import {shelters} from "../../data/abrigos";
-import foto from "../../constants/photos";
+import ButtonMui from "@components/ButtonMui";
+import {shelters} from "@data/abrigos";
+import foto from "@utils/photos";
 import { useParams } from "react-router-dom";
 
 // icons

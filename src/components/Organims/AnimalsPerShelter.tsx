@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { animals } from "../../data/adopt";
-import CardMui from "../Atoms/CardMui";
-import Pagination from "../Atoms/Pagination";
+import { animals } from "@data/adopt";
+import CardMui from "@components/CardMui";
+import Pagination from "@components/Pagination";
 
 export default function AnimalsPerShelter() {
   const [page, setPage] = useState(1);

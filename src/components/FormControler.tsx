@@ -5,7 +5,7 @@ type FormProps = {
   formLabel: string;
 };
 
-export default function Form({ formLabel }: FormProps) {
+export default function FormControler({ formLabel }: FormProps) {
   return (
     <div>
       <FormControl className="w-full">

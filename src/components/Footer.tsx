@@ -1,4 +1,4 @@
-import foto from "../../constants/photos.js";
+import foto from "@utils/photos.js";
 import { Container } from "@mui/material";
 
 export default function Footer() {

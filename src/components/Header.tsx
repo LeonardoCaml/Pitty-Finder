@@ -1,9 +1,12 @@
-import React, { useState } from "react";
-import foto from "../../constants/photos.js";
+import React, { MouseEventHandler, useState } from "react";
+import foto from "@utils/photos.js";
 
-export default function Header() {
+interface Props {
+  handleOpen: () => void;
+}
 
-  const [logged, isLogged] = useState(true);
+export default function Header({ handleOpen }: Props) {
+  const [logged, isLogged] = useState(false);
 
   return (
     <div className="flex h-20 justify-between items-center">
@@ -19,7 +22,7 @@ export default function Header() {
       ) : (
         <div className="flex gap-2 items-center">
           <div className="flex gap-2 items-center">
-            <h1 className="text-sm font-bold cursor-pointer">Entrar</h1>
+            <h1 className="text-sm font-bold cursor-pointer" onClick={handleOpen}>Entrar</h1>
             <div className="w-px h-4 bg-gray-400" />
             <h1 className="text-sm font-bold cursor-pointer">Criar Conta</h1>
           </div>

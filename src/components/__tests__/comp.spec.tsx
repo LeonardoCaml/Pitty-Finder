@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
-import CardMui from "../Atoms/CardMui";
-import image from "../../constants/photos";
+import CardMui from "../CardMui";
+import image from "../../utils/photos";
 import { test } from "vitest";
 import { render } from "@testing-library/react";
 
