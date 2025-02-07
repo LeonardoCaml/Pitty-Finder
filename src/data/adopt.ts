@@ -1,4 +1,4 @@
-import foto from "../constants/photos.js";
+import foto from "../utils/photos.js";
 
 interface Ficha {
   raca: string;

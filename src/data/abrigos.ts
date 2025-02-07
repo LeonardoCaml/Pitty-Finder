@@ -1,4 +1,4 @@
-import foto from "../constants/photos";
+import foto from "../utils/photos";
 
 interface MeiosDeContato {
   facebook: string;

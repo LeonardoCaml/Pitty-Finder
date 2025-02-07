@@ -1,5 +1,4 @@
-import { Container, Stack, Typography, Box } from "@mui/material";
-import foto from "../../constants/photos";
+import foto from "@utils/photos";
 
 export default function HomeSectionOne() {
   return (

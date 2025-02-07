@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom";
-import { shelters } from "../data/abrigos.js";
-import ButtonMui from "../components/Atoms/ButtonMui";
-import AnimalsPerShelter from "../components/Organims/AnimalsPerShelter";
+import { shelters } from "@data/abrigos";
+import ButtonMui from "@components/ButtonMui";
+import AnimalsPerShelter from "@components/Organims/AnimalsPerShelter";
 
-import Footer from "../components/Layout/Footer";
-import Header from "../components/Layout/Header";
+import Footer from "@components/Footer";
+import Header from "@components/Header";
 import { Container, Stack } from "@mui/material";
 import { FmdGood, Foundation, ContactPage, } from '@mui/icons-material'
 

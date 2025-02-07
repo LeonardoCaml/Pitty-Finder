@@ -1,11 +1,11 @@
 import { useParams } from "react-router-dom";
-import { animals } from "../data/adopt";
-import { shelters } from "../data/abrigos";
-import Header from "../components/Layout/Header";
-import Footer from "../components/Layout/Footer";
-import ButtonMui from "../components/Atoms/ButtonMui";
+import { animals } from "@data/adopt";
+import { shelters } from "@data/abrigos";
+import Header from "@components/Header";
+import Footer from "@components/Footer";
+import ButtonMui from "@components/ButtonMui";
 import { Container } from "@mui/material";
-import BulletCard from "../components/Atoms/bulletMUI";
+import BulletCard from "@components/bulletMUI";
 
 export default function AnimalCurrent() {
   const { id } = useParams<{ id: string }>();

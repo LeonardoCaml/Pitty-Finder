@@ -1,8 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
-import { animals } from "../../data/adopt";
-import { shelters } from "../../data/abrigos";
-import ButtonMui from "../Atoms/ButtonMui";
-import Card from "../Atoms/CardMui";
+import { animals } from "@data/adopt";
+import { shelters } from "@data/abrigos";
+import ButtonMui from "@components/ButtonMui";
+import Card from "@components/CardMui";
 
 export default function HomeSectionFilter() {
   // navigate route configure
